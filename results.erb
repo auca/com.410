@@ -1,7 +1,7 @@
 \documentclass[12pt,a4paper,oneside,notitlepage]{article}
 
 \newcommand{\documenttitle}
-{COM 410, 1799, Computer Architecture}
+{COM 410, 1799, Computer Architecture (Spring 2011)}
 \newcommand{\documentsubject}
 {Lab Grades}
 \newcommand{\documenttags}
@@ -45,7 +45,7 @@
 
         \hline
         \textbf{\#} &
-        \textbf{Name}     & \textbf{Task \#1} & \textbf{Task \#2}   & 
+        \textbf{Name/ID}  & \textbf{Task \#1} & \textbf{Task \#2}   & 
         \textbf{Task \#3} & \textbf{Task \#4} & \textbf{Bonus Task} & 
         \textbf{Bonus} & 
         \textbf{Total}  (<%= TOTAL_MAX %>)  & 
@@ -57,11 +57,11 @@
             <%= i + 1 %> &
             <%= row.first %> & 
             <% row.last[0..-4].each do |value| %>
-                \cellcolor[gray]{<%= [1 - value.to_f()/6, 1].min rescue 1 %>} 
+                %\cellcolor[gray]{<%= [1 - value.to_f()/6, 1].min rescue 1 %>} 
                 <%= value %> & 
             <% end %>
             <%= row.last[-3] %> & 
-            \cellcolor[gray]{<%= 1 - row.last[-2] / 500.0 %>} 
+            %\cellcolor[gray]{<%= 1 - row.last[-2] / 500.0 %>} 
             <%= row.last[-2] %>\% & 
             <%= row.last[-1] %>\\
         <% end %>
@@ -76,8 +76,8 @@
     \begin{itemize}
         \item The maximum value for each task is <%= MAX_VALUE_FOR_TASK %>.
 
-        \item If you have a question mark in the grade field, you need to 
-        contact me as soon as possible.
+        \item Cases of plagiarism: the grade was lowered or changed to zero
+              for both parties.
     \end{itemize}
 
 \end{document}
