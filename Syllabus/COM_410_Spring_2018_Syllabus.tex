@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper,oneside]{article}
+
+\usepackage[margin=3cm]{geometry}
+
+\usepackage{hyperref}
+\hypersetup{
+    pdftitle={COM 410, Computer Architecture},%
+    pdfauthor={Toksaitov Dmitrii Alexandrovich},%
+    pdfsubject={Syllabus},%
+    pdfkeywords={COM;}{410;}{syllabus;}{computer;}{architecture},%
+    colorlinks,%
+    linkcolor=black,%
+    citecolor=black,%
+    filecolor=black,%
+    urlcolor=black
+}
+
+\newcommand{\R}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+
+\begin{document}
+
+    \title{COM 410, Computer Architecture}
+    \author{
+        American University of Central Asia\\
+        Department of Software Engineering
+    }
+    \date{}
+    \maketitle
+
+    \section{Course Information}
+
+        \begin{description}
+            \item[Course ID]\hfill\\
+                COM 410, 3268
+            \item[Course Repository]\hfill\\
+                \url{https://github.com/auca/com.410}
+            \item[Class Discussions]\hfill\\
+                \url{https://piazza.com/auca.kg/spring2018/com410}
+            \item[Place]\hfill\\
+                AUCA, room 434\\
+                AUCA, laboratory G30, G31
+            \item[Time]\hfill\\
+                Lecture: Monday 10:50--12:05\\
+                Lab: Tuesday 10:50--12:05\\
+                Lab: Wednesday 12:45--14:00
+        \end{description}
+
+    \section{Prerequisites}
+
+        \begin{itemize}
+            \item COM-117, Object-Oriented Programming
+            \item or COM-223, Algorithms and Data Structures
+            \item or COM-311, Circuit Engineering
+        \end{itemize}
+
+    \section{Contact Information}
+
+        \begin{description}
+            \item[Instructor]\hfill\\
+                Toksaitov Dmitrii Alexandrovich\\
+                \href{mailto:toksaitov_d@auca.kg}{toksaitov\_d@auca.kg}
+            \item[Office]\hfill\\
+                AUCA, room 315
+            \item[Office Hours]\hfill\\
+                Tuesday 15:35--18:00\\
+                Thursday 15:35--18:00
+        \end{description}
+
+    \section{Course Overview}
+
+        The course introduces students to the topic of computer architecture and
+        organization. Students will focus on studying the structure and design
+        of modern central processing units. During lab sessions students will
+        learn basics of the x86 instruction set, the assembly language for the
+        aforementioned platform, and the representation of high-level language
+        structures in the low-level language.
+
+    \section{Topics Covered}
+
+        \begin{itemize}
+            \item The modern computer architectures and organization
+            \item The x86 and x86-64 assembly languages
+            \item Representation of high-level language structures in low-level
+            assembly languages
+            \item Acceleration with SIMD instructions
+            \item System Emulation
+        \end{itemize}
+
+    \section{Examinations}
+
+        \subsection{Lectures}
+
+            Students will have to take midterm and final examinations on topics
+            discussed during lectures. Each examination is in the form of a quiz
+            with a set of open and multiple choice questions.
+
+        \subsection{Labs}
+
+            Students will have a number of laboratory tasks to finish on their
+            own. Students will have to defend their work to the instructor
+            during separate midterm and final examination sessions.
+
+    \section{Course Projects}
+
+        Throughout the course, students will have to work on two major projects.
+        The first work will require to accelerate an image processing
+        application by optimizing the hot path of a C program in x86-64
+        assembly. The second project will require to study an old computer
+        architecture in details to write a software emulator for it.
+
+    \section{Reading}
+
+        \begin{itemize}
+            \item Computer Architecture: A Quantitative Approach, 5th Edition by
+            David Patterson and John L. Hennessy (ISBN: 978-0123838728)
+            \item Assembly Language for x86 Processors, 7th Edition by Kip R.
+            Irvine
+        \end{itemize}
+
+    \section{Grading}
+
+        \begin{itemize}
+            \item Class participation (through Piazza) (5\%)
+            \item Lab Midterm (7.5\%)
+            \item Lab Final (10\%)
+            \item Lecture Midterm (7.5\%)
+            \item Lecture Final (10\%)
+            \item Course projects (60\%)
+        \end{itemize}
+
+        \begin{itemize} \itemsep-10pt \parskip0pt \parsep0pt
+            \item[--] 90\%--100\%: A\\
+            \item[--] 80\%--89\%: A-\\
+            \item[--] 70\%--79\%: B+\\
+            \item[--] 65\%--69\%: B\\
+            \item[--] 60\%--64\%: B-\\
+            \item[--] 56\%--59\%: C+\\
+            \item[--] 53\%--55\%: C\\
+            \item[--] 50\%--52\%: C-\\
+            \item[--] 46\%--49\%: D+\\
+            \item[--] 43\%--45\%: D\\
+            \item[--] 40\%--42\%: D-\\
+            \item[--] Less than 39\%: F
+        \end{itemize}
+
+    \section{Rules}
+
+        Students are required to follow the rules of conduct of the Software
+        Engineering Department and American University of Central Asia.
+
+        Team work is NOT encouraged. The same blocks of code or similar
+        structural pieces in separate works will be considered as academic
+        dishonesty and all parties will get zero for the task.
+
+\end{document}
+
