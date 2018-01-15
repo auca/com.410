@@ -5,7 +5,7 @@
 General course information, time, room and lab numbers, rules, grading, and
 books
 
-* <https://github.com/auca/com.410/blob/master/Syllabus/COM_410_Spring_2017_Syllabus.pdf>
+* <https://github.com/auca/com.410/blob/master/Syllabus/COM_410_Spring_2018_Syllabus.pdf>
 
 ## Class Discussions
 
