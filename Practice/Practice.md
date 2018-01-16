@@ -69,7 +69,7 @@ objdump -D <Executable File Name> | less
 system call.
 
 ```bash
-man 3 write
+man 2 write
 ```
 
 ### Task #4, increment and decrement
@@ -132,12 +132,21 @@ To translate and link your assembly program run the folowing
 #### C
 
 * [Beej's Guide to C Programming](https://beej.us/guide/bgc)
+
+#### GDB
+
 * [GDB Quick Reference](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
+
+#### x86 ISA
+
 * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/en-us/articles/intel-sdm)
 * [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
+* [X86 Opcode and Instruction Reference](http://ref.x86asm.net/index.html)
+
+#### Linux Assembler
+
 * [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
-* [X86 Opcode and Instruction Reference](http://ref.x86asm.net/index.html)
 
 ### Books
 
