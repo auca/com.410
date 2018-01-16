@@ -4,23 +4,83 @@ Lab Tasks
 You can use the AUCA server for lab work through SSH at 'auca.space'. The login
 has the format `<last name>_<first letter of the first name>`.
 
+There are multiple ways to prepare a working environment on Windows ranging from
+using a [virtual machines](https://www.virtualbox.org/wiki/Downloads) running
+[Linux](https://www.ubuntu.com), using the [Linux Subsystem on Windows](https://docs.microsoft.com/en-us/windows/wsl/install-win10),
+using the [MinGW and MSYS](http://www.mingw.org) development environment, or the
+[Cygwin](http://www.cygwin.com) Unix emulation system among others.
+
+In all cases ensure that you have the following packages installed
+
+* coreutils
+* binutils
+* gcc
+* make
+* gdb
+
 ## Lab #1, Basics
 
 ### Task #1, messages with C
 
+1. Create a C application that prints some text message to the standard output
+   stream.
+
+2. Debug the program with [GDB](https://www.gnu.org/software/gdb). Use the text
+   UI mode of the debugger.
+
+```bash
+gdb -tui ./<Executable File Name>
+```
+
+3. Try to preprocess, compile and link the program step by step.
+
+```bash
+gcc -E <Source File Name> > <Preprocessed File Name>
+gcc -c -o <Object File Name>.o <Source File Name>
+gcc -o <Executable File Name> <Object File Name>
+```
+
+3. Disassemble the program with [objdump](https://www.gnu.org/software/binutils)
+   and send the output to the pager program `less`. Type `/main<ENTER>` to
+   search for the `main` function. Navigate up and down with `j` and `k` keys.
+   Type `q` to exit from the pager.
+
+```bash
+objdump -D <Executable File Name> | less
+```
+
 ### Task #2, messages with the x86-64 assembly
 
+1. Write an x86-64 assembly program to print some message to the standard output
+   stream. Use the `puts` C standard library function to output the text message
+   to the screen. Use the GNU Assembler to translate your program into the
+   object file.
+
+2. Step through the instructions with [GDB](https://www.gnu.org/software/gdb).
+
+3. Rewrite the program in x86 assembly for the 32-bit architecture.
+
+4. Rewrite one program by using the Intel assembly syntax.
+
 ### Task #3, messages directly through the operating system
+
+1. Rewrite the 32-bit and the 64-bit programs from task #2 without using the
+`puts` function call. Call the operating system kernel directly. Use the `write`
+system call.
+
+```bash
+man 3 write
+```
 
 ### Compilation
 
 To compile your C program on Linux run the following
 
-    make <Source File Name>
+    CFLAGS=-g make <Source File Name>
 
 or
 
-    gcc -o <Name of the Executable> <C Source File Name>
+    gcc -g -o <Name of the Executable> <C Source File Name>
 
 To translate and link your assembly program run the folowing
 
@@ -31,6 +91,8 @@ To translate and link your assembly program run the folowing
     man make
     man gcc
     man as
+    man gdb
+    man objdump
 
 ### Links
 
@@ -38,6 +100,8 @@ To translate and link your assembly program run the folowing
 
 * [Beej's Guide to C Programming](https://beej.us/guide/bgc)
 * [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
+* [GDB Quick Reference](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
+* [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
 
 ### Books
 
