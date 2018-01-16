@@ -133,7 +133,7 @@ To translate and link your assembly program run the folowing
 
 * [Beej's Guide to C Programming](https://beej.us/guide/bgc)
 * [GDB Quick Reference](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
-* [Intel® 64 and IA-32 Architectures Software](https://software.intel.com/en-us/articles/intel-sdm)
+* [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/en-us/articles/intel-sdm)
 * [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
 * [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
