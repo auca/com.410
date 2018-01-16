@@ -32,7 +32,7 @@ In all cases ensure that you have the following packages installed
 gdb -tui ./<Executable File Name>
 ```
 
-3. Try to preprocess, compile and link the program step by step.
+3. Try to preprocess, compile, and link the program step by step.
 
 ```bash
 gcc -E <Source File Name> > <Preprocessed File Name>
@@ -72,6 +72,39 @@ system call.
 man 3 write
 ```
 
+### Task #4, increment and decrement
+
+1. Write a program that reads one integer number from the standard input stream,
+   increments the number by one, and writes the number to the standard output
+   stream.
+
+2. Write a program that reads one integer number from the standard input stream,
+   decrements the number by one, and writes the number to the standard output
+   stream.
+
+In both cases use the C standrad library functions `scanf` and `printf`. In
+both cases use the the x86-64 assembly.
+
+```bash
+man 3 scanf
+man 3 printf
+```
+
+### Task #5, Sum of two numbers
+
+1. Write a program in x86-64 assembly that reads two numbers from the standard
+   input stream, sums them together, and outputs the result to the standard
+   output stream.
+
+```bash
+man 3 scanf
+man 3 printf
+```
+
+### Homework #1
+
+Rewrite all the programs from tasks #4 and #5 in x86 32-bit assembly.
+
 ### Compilation
 
 To compile your C program on Linux run the following
@@ -99,9 +132,12 @@ To translate and link your assembly program run the folowing
 #### C
 
 * [Beej's Guide to C Programming](https://beej.us/guide/bgc)
-* [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
 * [GDB Quick Reference](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
+* [Intel® 64 and IA-32 Architectures Software](https://software.intel.com/en-us/articles/intel-sdm)
 * [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
+* [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
+* [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
+* [X86 Opcode and Instruction Reference](http://ref.x86asm.net/index.html)
 
 ### Books
 
