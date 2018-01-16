@@ -150,6 +150,8 @@ To translate and link your assembly program run the folowing
 
 ### Books
 
+#### C
+
 * C Programming: A Modern Approach, 2nd Edition by K. N. King
 
 #### x86 Assembly
