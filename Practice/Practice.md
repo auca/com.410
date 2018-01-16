@@ -143,7 +143,7 @@ To translate and link your assembly program run the folowing
 * [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
 * [X86 Opcode and Instruction Reference](http://ref.x86asm.net/index.html)
 
-#### Linux Assembler
+#### Assemblers
 
 * [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
