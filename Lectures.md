@@ -1,6 +1,6 @@
 # Lectures
 
-1. Introduction (TBD)
+1. [Introduction](https://docs.google.com/presentation/d/1b8DLwzARwa1Tx6v-VbHrjGR0ISkma49AnmKgcfXK8AA)
 
 ### Videos
 
