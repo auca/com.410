@@ -124,6 +124,10 @@ To translate and link your assembly program run the folowing
 
     gcc -o <Name of the Executable> <Assembly Source File Name>
 
+To start the executable
+
+    ./<Name of the Executable>
+
 ### Documentation
 
     man make
