@@ -101,6 +101,11 @@ man 3 scanf
 man 3 printf
 ```
 
+### Task #6
+
+1. Write a program in x86-64 assembly to find a sum of 10 integer
+   numbers. Create a function to sum the numbers.
+
 ### Homework #1
 
 Rewrite all the programs from tasks #4 and #5 in x86 32-bit assembly.
