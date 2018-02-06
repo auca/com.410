@@ -32,10 +32,11 @@ In all cases ensure that you have the following packages installed
 gdb -tui ./<Executable File Name>
 ```
 
-3. Try to preprocess, compile, and link the program step by step.
+3. Try to preprocess, generate assembly, compile, and link the program step by step.
 
 ```bash
-gcc -E <Source File Name> > <Preprocessed File Name>
+gcc -E -o <Preprocessed File Name> <Source File Name>
+gcc -S -o <Translated Assembly File Name> <Source File Name>
 gcc -c -o <Object File Name>.o <Source File Name>
 gcc -o <Executable File Name> <Object File Name>
 ```
