@@ -107,9 +107,29 @@ man 3 printf
 1. Write a program in x86-64 assembly to find a sum of 10 integer
    numbers. Create a function to sum the numbers.
 
+### Task #7
+
+1. Read two numbers and find if the first number is greater than the second one, the second
+   is greater than the first one, or both numbers are equal. Print an appropriate message.
+
+### Task #8
+
+1. Write a program with a recursive function to find an `n`'th Fibonacci number.
+2. Write a program with a non-recursive function to find an `n`'th Fibonacci number.
+
+### Task #9
+
+1. Write a program with a recursive function to find a GCD of two number.
+2. Write a program with a non-recursive function to find a GCD of two number.
+
+### Task #10
+
+1. Write a program with a recursive function to find a factorial of `n`.
+2. Write a program with a non-recursive function to find a factorial of `n`.
+
 ### Homework #1
 
-Rewrite all the programs from tasks #4 and #5 in x86 32-bit assembly.
+Rewrite all the programs from tasks #4, #5, and #8 in x86 32-bit assembly.
 
 ### Compilation
 
