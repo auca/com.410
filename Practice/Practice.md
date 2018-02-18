@@ -93,9 +93,9 @@ man 3 printf
 
 ### Task #5, Sum of two numbers
 
-1. Write a program in x86-64 assembly that reads two numbers from the standard
-   input stream, sums them together, and outputs the result to the standard
-   output stream.
+* Write a program in x86-64 assembly that reads two numbers from the standard
+  input stream, sums them together, and outputs the result to the standard
+  output stream.
 
 ```bash
 man 3 scanf
@@ -104,28 +104,29 @@ man 3 printf
 
 ### Task #6
 
-1. Write a program in x86-64 assembly to find a sum of 10 integer
-   numbers. Create a function to sum the numbers.
+* Write a program in x86-64 assembly to find a sum of 10 integer
+  numbers. Create a function to sum the numbers.
 
 ### Task #7
 
-1. Read two numbers and find if the first number is greater than the second one, the second
-   is greater than the first one, or both numbers are equal. Print an appropriate message.
+* Read two numbers and find if the first number is greater than the second one, the second
+  is greater than the first one, or both numbers are equal. Print an appropriate message.
 
 ### Task #8
 
-1. Write a program with a recursive function to find an `n`'th Fibonacci number.
-2. Write a program with a non-recursive function to find an `n`'th Fibonacci number.
+* Write a program with a recursive function to find an `n`'th Fibonacci number.
 
 ### Task #9
 
-1. Write a program with a recursive function to find a GCD of two number.
-2. Write a program with a non-recursive function to find a GCD of two number.
+* Write a program with a recursive function to find a GCD of two number.
 
 ### Task #10
 
-1. Write a program with a recursive function to find a factorial of `n`.
-2. Write a program with a non-recursive function to find a factorial of `n`.
+* Write a program with a recursive function to find a factorial of `n`.
+
+### Task #11
+
+* Create non-recursive versions of tasks #8–10.
 
 ### Homework #1
 
