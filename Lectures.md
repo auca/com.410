@@ -1,6 +1,7 @@
 # Lectures
 
 1. [Introduction](https://docs.google.com/presentation/d/1b8DLwzARwa1Tx6v-VbHrjGR0ISkma49AnmKgcfXK8AA)
+2. [Basic Concepts](https://docs.google.com/presentation/d/1gRW2JthdGZIN0wCF4E3L5pobvie6sXnOmPMPryN-JYM)
 
 ### Videos
 
