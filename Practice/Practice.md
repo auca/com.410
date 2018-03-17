@@ -43,7 +43,8 @@ gcc -o <Executable File Name> <Object File Name>
 
 3. Disassemble the program with [objdump](https://www.gnu.org/software/binutils)
    and send the output to the pager program `less`. Type `/main<ENTER>` to
-   search for the `main` function. Navigate up and down with `j` and `k` keys.
+   search for the `main` function. Type `n` or `N` to go forward or backward
+   between your search results. Navigate up and down with `j` and `k` keys.
    Type `q` to exit from the pager.
 
 ```bash
