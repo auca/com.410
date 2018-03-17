@@ -70,9 +70,7 @@ objdump -D <Executable File Name> | less
 `puts` function call. Call the operating system kernel directly. Use the `write`
 system call.
 
-```bash
-man 2 write
-```
+    man 2 write
 
 ### Task #4, increment and decrement
 
@@ -87,10 +85,8 @@ man 2 write
 In both cases use the C standrad library functions `scanf` and `printf`. In
 both cases use the the x86-64 assembly.
 
-```bash
-man 3 scanf
-man 3 printf
-```
+    man 3 scanf
+    man 3 printf
 
 ### Task #5, Sum of two numbers
 
