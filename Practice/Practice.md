@@ -178,6 +178,10 @@ gcc -Os -o <Name of the Executable> <C Source File Name>
 
 * [GDB Quick Reference](http://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 
+#### Radare2
+
+* [Radare2 Visual Graphs](https://monosource.gitbooks.io/radare2-explorations/content/intro/visual_graphs.html)
+
 #### x86 ISA
 
 * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/en-us/articles/intel-sdm)
