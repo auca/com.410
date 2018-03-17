@@ -114,7 +114,7 @@ man 3 printf
 
 ### Task #9
 
-* Write a program with a recursive function to find a GCD of two number.
+* Write a program with a recursive function to find a GCD of two numbers.
 
 ### Task #10
 
@@ -126,25 +126,43 @@ man 3 printf
 
 ### Homework #1
 
-Rewrite all the programs from tasks #4, #5, and #8 in x86 32-bit assembly.
+Finish all the tasks to prepare for the exams. Rewrite all the programs from tasks #4, #5, and #8 in x86 32-bit assembly.
 
 ### Compilation
 
 To compile your C program on Linux run the following
 
-    CFLAGS=-g make <Source File Name>
+```bash
+CFLAGS=-g make <Source File Name>
+```
 
 or
 
-    gcc -g -o <Name of the Executable> <C Source File Name>
+```bash
+gcc -g -o <Name of the Executable> <C Source File Name>
+```
 
 To translate and link your assembly program run the folowing
 
-    gcc -o <Name of the Executable> <Assembly Source File Name>
+```bash
+gcc -o <Name of the Executable> <Assembly Source File Name>
+```
 
 To start the executable
 
-    ./<Name of the Executable>
+```bash
+./<Name of the Executable>
+```
+
+To compile a C program with optimizations run one command from the following list
+depending on the level of optimization that you need (`O1-3` or `Os` for size).
+
+```bash
+gcc -O1 -o <Name of the Executable> <C Source File Name>
+gcc -O2 -o <Name of the Executable> <C Source File Name>
+gcc -O3 -o <Name of the Executable> <C Source File Name>
+gcc -Os -o <Name of the Executable> <C Source File Name>
+```
 
 ### Documentation
 
