@@ -98,11 +98,6 @@ man 3 printf
   input stream, sums them together, and outputs the result to the standard
   output stream.
 
-```bash
-man 3 scanf
-man 3 printf
-```
-
 ### Task #6
 
 * Write a program in x86-64 assembly to find a sum of 10 integer
