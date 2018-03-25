@@ -106,7 +106,6 @@ add7:
     add %rdx, %rax
     add %rcx, %rax
     add %r8,  %rax
-    add %r9,  %rax
     pop %rdx       # return address
     pop %rdi       # 7
     add %rdi, %rax
