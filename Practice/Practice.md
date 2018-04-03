@@ -122,7 +122,10 @@ both cases use the the x86-64 assembly.
 
 ### Task #12
 
-* Create functions to calculate the number of days in a month for a given year and month number.
+* Create functions in C to calculate the number of days in a month for a given year and month number. Write a version with an `if`
+construct, a version with a `swith/case` construct, and a version with a lookup array for values.
+
+* Write the version with a lookup array with values in assembly from scratch.
 
 ### Homework
 
