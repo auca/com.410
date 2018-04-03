@@ -120,6 +120,10 @@ both cases use the the x86-64 assembly.
 
 * Create non-recursive versions of tasks #8–10.
 
+### Task #12
+
+* Create functions to calculate the number of days in a month for a given year and month number.
+
 ### Homework
 
 Finish all the tasks to prepare for the exams. Rewrite all the programs from tasks #4, #5, and #8 in x86 32-bit assembly.
