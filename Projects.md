@@ -1,4 +1,4 @@
 Course Project
 ==============
 
-[Requirements](https://github.com/toksaitov/ips-arch-project)
+[Image Processing Acceleration](https://github.com/toksaitov/ips-arch-project)
