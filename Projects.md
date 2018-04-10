@@ -1,11 +1,4 @@
-Projects
-========
+Course Project
+==============
 
-## SIMD
-
-TBD
-
-## NES
-
-TBD
-
+[Requirements](https://github.com/toksaitov/ips-arch-project)
