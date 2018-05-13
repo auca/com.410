@@ -58,7 +58,7 @@ gcd_loop:
 .global main
 main:
     # long a, b;
-    sub $0x10, %rsp # allocate the data on the stack for the local variables as
+    sub $0x10, %rsp # Allocate the data on the stack for the local variables as
                     # we need their addresses for the `scanf` function. We can't
                     # get the address of registers.
     # scanf(input_format, &a, &b);
@@ -86,7 +86,7 @@ main:
     xor %eax, %eax
     call printf@plt
 
-    add $0x10, %rsp # remove the local variables `a` and `b` from the stack.
+    add $0x10, %rsp # Remove the local variables `a` and `b` from the stack.
 
     # return 0;
     xor %eax, %eax

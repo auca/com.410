@@ -56,7 +56,7 @@ fib_loop:
 .global main
 main:
     # long n;
-    sub $0x8, %rsp # allocate the data on stack for the local variable as
+    sub $0x8, %rsp # Allocate the data on the stack for the local variable as
                    # we need its address for the `scanf` function. We can't
                    # get the address of a register.
     # scanf(input_format, &n);
@@ -85,7 +85,7 @@ main:
     xor %eax, %eax
     call printf@plt
 
-    add $0x8, %rsp # remove the local variable `n` from the stack.
+    add $0x8, %rsp # Remove the local variable `n` from the stack.
 
     # return 0;
     xor %eax, %eax
