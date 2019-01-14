@@ -26,3 +26,6 @@ View the screen of the instructor's machine
 
 * <https://hangouts.google.com/hangouts/_/auca.kg/com-410>
 
+## Registration Form
+
+* <https://docs.google.com/spreadsheets/d/1mTAbPKdYiSJQsV0YWvl3Da_Tk9srkWwqxmVJiA07rEc/edit?usp=sharing>
