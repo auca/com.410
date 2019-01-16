@@ -40,7 +40,7 @@ View previous class recordings
 
 * <https://www.youtube.com/playlist?list=PLHcEzCb_lW6cLav5zZ4HkFNWfQRl3eyGM>
 
-#### Group A
+#### Group B
 
 * <https://www.youtube.com/playlist?list=PLHcEzCb_lW6dybyqopJvBWZkMazQNRCh7>
 
