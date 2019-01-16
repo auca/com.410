@@ -24,7 +24,25 @@ For general discussions between students and the course instructor
 
 View the screen of the instructor's machine
 
-* <https://hangouts.google.com/hangouts/_/auca.kg/com-410>
+* <https://hangouts.google.com/hangouts/_/ytl/9Py7swRVhLRLr9voYfzBkUKxC2XCI3cLriYP0O6IAj0=?hl=en_US>
+
+## Recordings
+
+View previous class recordings
+
+### Lectures
+
+* TBD
+
+### Labs
+
+#### Group A
+
+* <https://www.youtube.com/playlist?list=PLHcEzCb_lW6cLav5zZ4HkFNWfQRl3eyGM>
+
+#### Group A
+
+* TBD
 
 ## Registration Form
 
