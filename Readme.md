@@ -24,7 +24,7 @@ For general discussions between students and the course instructor
 
 View the screen of the instructor's machine
 
-* <https://hangouts.google.com/hangouts/_/ytl/9Py7swRVhLRLr9voYfzBkUKxC2XCI3cLriYP0O6IAj0=?hl=en_US>
+* <https://hangouts.google.com/hangouts/_/ytl/nSVxbjMNwBS718ZZLnTGnwPStW4A4Dx0nmtzqVa8Dwc=?hl=en_US>
 
 ## Recordings
 
@@ -42,7 +42,7 @@ View previous class recordings
 
 #### Group A
 
-* TBD
+* <https://www.youtube.com/playlist?list=PLHcEzCb_lW6dybyqopJvBWZkMazQNRCh7>
 
 ## Registration Form
 
