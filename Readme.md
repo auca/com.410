@@ -14,12 +14,6 @@ participation grade
 
 * <https://piazza.com/auca.kg/spring2018/com410>
 
-## Class Chat
-
-For general discussions between students and the course instructor
-
-* <https://auca-sfw.slack.com/messages/com-410-spring-2018>
-
 ## Screencast
 
 View the screen of the instructor's machine
