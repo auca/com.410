@@ -18,7 +18,7 @@ participation grade
 
 View the screen of the instructor's machine
 
-* <https://hangouts.google.com/hangouts/_/ytl/nSVxbjMNwBS718ZZLnTGnwPStW4A4Dx0nmtzqVa8Dwc=?hl=en_US>
+* <https://hangouts.google.com/hangouts/_/ytl/11l9LWX8_TLYWofRb2a7q2RUKyq8ekEAGHJ_cAmCuQ0=?hl=en_US>
 
 ## Recordings
 
@@ -37,6 +37,10 @@ View previous class recordings
 #### Group B
 
 * <https://www.youtube.com/playlist?list=PLHcEzCb_lW6dybyqopJvBWZkMazQNRCh7>
+
+#### Group C
+
+* <https://www.youtube.com/playlist?list=PLHcEzCb_lW6d4F1U1SO_nx6BD1JYLUdnB>
 
 ## Registration Form
 
