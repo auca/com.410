@@ -26,7 +26,7 @@ View previous class recordings
 
 ### Lectures
 
-* TBD
+* <https://www.youtube.com/playlist?list=PLHcEzCb_lW6cB1M03vkrZcDAniSkCJjtW>
 
 ### Labs
 
