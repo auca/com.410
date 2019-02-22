@@ -20,6 +20,9 @@ b:
 # int main() { ...
 .global main
 main:
+    push %rbp
+    mov %rsp, %rbp
+
     # scanf(input_format, &a, &b);
     lea input_format(%rip), %rdi
     lea a(%rip), %rsi
@@ -38,6 +41,8 @@ main:
     lea output_format(%rip), %rdi
     xor %eax, %eax
     call printf@plt # `a`, `b` , and `sum` is in %rsi-%rcx as per the ABI requirements.
+
+    leave
 
     # return 0;
     xor %eax, %eax
