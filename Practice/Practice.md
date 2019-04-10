@@ -127,6 +127,10 @@ construct, a version with a `swith/case` construct, and a version with a lookup 
 
 * Write the version with a lookup array with values in assembly from scratch.
 
+### Task #13
+
+* Write a program that given an array `input` of 30 numbers (any numbers) in code, finds and writes the result of `input[i] * a + c` back to the array and then prints the resulting array. The numbers `a` and `b` should be read from the standard input with `scanf`.
+
 ### Homework
 
 Finish all the tasks to prepare for the exams. Rewrite all the programs from tasks #4, #5, and #8 in x86 32-bit assembly.
