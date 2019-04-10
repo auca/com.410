@@ -129,7 +129,7 @@ construct, a version with a `swith/case` construct, and a version with a lookup 
 
 ### Task #13
 
-* Write a program that given an array `input` of 30 numbers (any numbers) in code, finds and writes the result of `input[i] * a + c` back to the array and then prints the resulting array. The numbers `a` and `b` should be read from the standard input with `scanf`.
+* Write a program that given an array `input` of 30 numbers (any numbers) in code, finds and writes the result of `input[i] * a + b` back to the array and then prints the resulting array. The numbers `a` and `b` should be read from the standard input with `scanf`.
 
 ### Homework
 
