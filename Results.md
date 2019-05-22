@@ -1,10 +1,5 @@
 ## Results
 
-### Spring 2018
+### Spring 2019
 
-* Lecture Examinations (TBD)
-* Practice Defence and Projects (TBD)
-
----
-* Totals and Grades (TBD)
-
+* [Totals and Grades](https://drive.google.com/file/d/1men1HbvKIDiyBgsDxWiu_OtY0K8-YPPX/view?usp=sharing)
