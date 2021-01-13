@@ -62,7 +62,7 @@ luckier as they can use the standard `COMMAND+C` and `COMMAND+V` key
 combinations.
 
 ```bash
-# WARNING: If you have existing .ssh keys of configuration files, make a backup of them first.
+# WARNING: If you have existing .ssh keys or configuration files, make a backup of them first.
 scp -r <AUCA login>@auca.space:~/.ssh ~/
 ```
 
