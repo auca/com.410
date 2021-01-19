@@ -1,15 +1,13 @@
-Previous Class Recordings
-=========================
-
-## Lectures
+Old Class Recordings
+====================
 
 ### Spring 2019
+
+## Lectures
 
 * <https://www.youtube.com/playlist?list=PLHcEzCb_lW6cB1M03vkrZcDAniSkCJjtW>
 
 ## Labs
-
-### Spring 2019
 
 * <https://www.youtube.com/playlist?list=PLHcEzCb_lW6cLav5zZ4HkFNWfQRl3eyGM>
 * <https://www.youtube.com/playlist?list=PLHcEzCb_lW6dybyqopJvBWZkMazQNRCh7>
