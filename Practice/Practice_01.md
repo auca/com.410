@@ -84,7 +84,7 @@ It is a good idea to create a separate directory for the course work on the
 server and give it a meaningful name (e.g., `com-410`). You should probably
 keep different labs (experiments) in separate directories, too. Name them
 appropriately. Use the commands and programs such as `cd`, `mkdir`, `mv`,
-`touch`, `nano`, and `ls`. 
+`touch`, `nano`, `cat`, and `ls`. 
 
 ## Problem #1: "Hello, World"
 
@@ -196,6 +196,143 @@ operations again, but for the aarch64 ISA. Use the `aarch64-linux-gnu-gcc`. Do
 it on your own. Reflect on the difference of instructions and machine code
 between x86-64 and aarch64. Think, why is it that you can still run the ARM
 program on an x86-64 CPU of the server.
+
+## Problem #2: "A Message in a Rectangle"
+
+Create a program that prints the "hello, world" greeting surrounded by the
+asterisk symbols. To print a line of asterisks, write a separate function
+called `void print_decor_line()`. Note the naming compared to Java.
+
+Perform several experiments. Every time you have to recompile the program, try
+running it if the compilation was successful.
+
+### Experiments
+
+1. Try putting the function before and after `main(...)`. You will find that the
+   order of function definition in C matters, compared to Java.
+2. Try putting the function into a separate header file, `utilities.h`. Include
+   the file before main once. Add library includes into `utilities.h` if
+   necessary.
+3. Include the `utilities.h` file before main twice. You will see that without
+   the *Include Guard* in the header files, you will not compile the program.
+   Fix it by adding the [Include Guard](https://en.wikipedia.org/wiki/Include_guard)
+   into the header file.
+
+For large source files, the compilation can take a lot of time. For example, the
+Linux kernel takes on average one hour to be recompiled from scratch on a modern
+personal computer. In large projects, to allow developers to recompile only those
+modified files, programs in C are split into multiple `.c` files, preprocessed
+and compiled separately, and then combined with a linker program. Even for your
+current application that consists of only one file, the linker is called to
+combine your object file with the system libraries' machine code and the C
+runtime (that prepares your program's environment to run).
+
+Even though it is not necessary for such a small program to do it, let us split
+our program into two `.c` files, where the main file references entities from
+another through the `.h` header. Create a `utilities.c` file, and move the
+`print_decor_line` function to it. Leave the functions declaration in the header
+file without the body. Do not forget to include the header file in the newly
+created `.c` file. Compile the files separately. Finally, link (combine) them
+together. Use the `-c` flag to tell the compiler to generate an object file
+without performing any linking for the first two steps.
+
+```bash
+gcc -c -o 02.o 02.c # Step 1: compiling into an object file
+gcc -c -o utilities.o utilities.c # Step 2: compiling into an object file
+gcc -o 02 02.o utilities.o # Step 3: linking object files, system libraries, and the C runtime to build a final executable
+./02
+**************
+|hello, world|
+**************
+```
+
+Try to change the function in the `utilities.c` file to generate. Figure out
+what steps outlined in the comments above (`Step 1:...`, `Step 2:...`, `Step 3...`)
+do you only have to repeat to rebuild your program?
+
+```bash
+# TODO: figure out which steps above are only required to be repeated to recompile the program
+./02
+--------------
+|hello, world|
+--------------
+```
+
+It is great that we can only recompile parts that were changed, but what if we
+don't want to track manually which files have changed since the last full
+rebuild? What if we don't want to run the compiler and linker manually multiple
+times? We can delegate this task to a build system. A build system is a program
+that tracks modification dates of the files and runs the commands to rebuild the
+files (artifacts), such as object files and executables. Build systems usually
+require a configuration file, where you specify the build rules for all the
+artifacts of your system. There are many build systems. The most popular
+software products for the C and C++ programming languages are Make and CMake.
+We will use Make on this course.
+
+Create a file named `Makefile` with the following content
+
+```make
+CC=gcc
+CFLAGS=-O3
+LDLIBS=
+
+02: 02.o utilities.o
+
+02.o: 02.c
+
+utilities.o : utilities.c
+
+.PHONY: clean
+clean:
+    rm -rf 02.o utilities.o 02
+```
+
+Ensure that you have a `<TAB>` character befor `rm`.
+
+The `CC` variable allows you to specify a C compiler that you want to use. You
+can try replacing `gcc` with `clang`. Clang is another popular C compiler that
+we have installed on our server.
+
+The `CFLAGS` variable allows you to specify compiler flags. We have provided the
+flag to turn optimizations on as an example. You can add more compiler flags here
+by separating them with a whitespace character.
+
+In some of our programs, we will have to tell the compiler to use additional
+system libraries that are not linked by default. For example, to use the `Math`
+library on our OS in C, we have to add a `-lm` flag to the `LDLIBS` library.
+
+Next, we have several targets, such as `02`, `02.o`, `utilities.o`, and `clean`.
+For many targets, we have prerequisites specified after the colon. Prerequisites
+tell Make to track the file's modification date with the specified name with the
+target's modification date and rerun the receipt if the dates are considerably
+different. The targets `02`, `02.o`, and `utilities.o` have implied receipts
+(you don't see them). Based on the prerequisites' extension, Make will figure
+out how to properly start the compiler to build the implied receipts' target.
+The `clean` rule has a receipt specified on the next line after the `<TAB>`
+character. The `rm -rf 02.o utilities.o 02` instruction is executed by Make in
+the command interpreter. The command interpreter runs the `rm` program to remove
+all the generated files. `clean` is a utility target useful to clean up the
+directory from all the generated files.
+
+You can now rebuild the program by only compiling the modified files with only
+one command by using Make.
+
+```bash
+make
+```
+
+You can also remove all the generated artifacts with just the following
+
+```bash
+make clean
+```
+
+Compile the project with Make. Note how many times the compiler front-end was
+called. Try modifying the `print_decor_line` back to print stars. Recompile the
+program. How many times was the compiler called this time?
+
+Recall what steps do you need to do to compile a Java program. How do you think,
+do we need a build system to compile large Java apps?
 
 ### Documentation
 
