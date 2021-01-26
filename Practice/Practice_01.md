@@ -82,9 +82,12 @@ command.
 
 It is a good idea to create a separate directory for the course work on the
 server and give it a meaningful name (e.g., `com-410`). You should probably
-keep different labs (experiments) in separate directories, too. Name them
-appropriately. Use the commands and programs such as `cd`, `mkdir`, `mv`,
-`touch`, `nano`, `cat`, and `ls`. 
+keep different problems (experiments) in separate directories, too. Name the
+first three directories `p01`, `p02`, and `p03`. To prepare your environment use
+the commands and programs such as `cd`, `mkdir`, `mv`, `touch`, `nano`, `cat`,
+and `ls`. Use `man` with the name of the program to get help for these
+command-line tools. You can also use `man` with a name of a C function to get
+the Standard Library's documentation.
 
 ## Problem #1: "Hello, World"
 
@@ -334,6 +337,118 @@ program. How many times was the compiler called this time?
 Recall what steps do you need to do to compile a Java program. How do you think,
 do we need a build system to compile large Java apps?
 
+## Problem #3: "What is Your Name?"
+
+Write a program that reads a user name from the console, then forms and prints a
+greeting message for the user. Use the `gets` C function to read the first name
+of the user. Create a local array of 512 bytes in size to store the full name.
+Compile directly without Make, but use additional compiler flags
+`-g -fno-stack-protector -z execstack`. Ignore complaints from the compiler,
+start the application, and try to type your name. Ensure the program works.
+
+```bash
+gcc -g -fno-stack-protector -z execstack -o 03 03.c
+./03
+What is your full name?
+Dmitrii Toksaitov
+Hello, Dmitrii Toksaitov!
+```
+
+Try to redirect a specially crafted file located `/srv/input.txt` into your
+program. The `<` redirection symbol will tell your command interpreter and OS to
+make your application believe that input comes from the user, even though it
+arrives from the file on a disk.
+
+```bash
+./03 < /srv/input.txt
+```
+
+What has happened? Try to explain it.
+
+Build a similar Java program on the server. Use `Scanner` to read input.
+
+```bash
+javac Greeter.java
+java Greeter
+What is your full name?
+Dmitrii Toksaitov
+Hello, Dmitrii Toksaitov!
+```
+
+Use the same input that broke the C program.
+
+```bash
+java Greeter < /srv/input.txt
+```
+
+Do you have the same result here? Try to explain why is the Java implementation
+of the same program runs differently for the same input.
+
+Let's go back to the C program. The `-g` flag that you have specified tells the
+compiler to add debugging information into your executable. With that
+information, it is easier to use a debugger tool such as GDB.
+
+Run your program in the GNU Debugger (GDB).
+
+```bash
+gdb --tui ./03
+```
+
+Put a breakpoint with `b <line number>` before the `gets` function call. Run the
+`run < /srv/input.txt` command. Take a look at the function frame with the
+`info frame` command. What is the return address of the `main` function? Make
+one step in your code with the `n` command. Run the `info frame` command again.
+What is the return address of the `main` function now? Switch to the assembly
+view of your code with the `layout asm` command. Step through your assembly
+instructions one by one with the `si` command. Take a look at where you will go
+when your `main` function finishes execution. Exit from GDB with the `q`
+command.
+
+## Homework Problem #4: "Secure Greeting"
+
+Create a copy of the previous lab directory. Use the name `p04` name. Remove all
+files from it except for the source file and rename the source file to `04.c`.
+
+Fix the code to make it secure to the content of the `/srv/input.txt` file. You
+will have to do a bit of research on your own. You can use Internet resources to
+find the name of the function to make your code better. Links and Books below
+may also be useful.
+
+## Homework Problem #5: "A bit more C: Increment"
+
+Create several C programs that we will try to rewrite in assembly in the next
+lab from scratch. This code will be useful to compare and contrast the two
+worlds of high-level and low-level programming languages.
+
+The first program should read one long number from the user and output its value
+incremented by one. The code should be located under `p05` directory, and the
+source file should be named `05.c`. The output format must be precise, and you
+must use the `scanf` function here to read the number. Security is of no
+importance here. You may create a Makefile, but it is not necessary. Ensure that
+you can compile your code with the following flags `-static -fno-pie -no-pie`.
+These flags will be useful in the next lab.
+
+```bash
+./05
+123
+The number next to 123 is 124.
+```
+
+## Homework Problem #6: "A bit more C: Sum of Two Numbers"
+
+The second program should read two long numbers from the user and output their
+sum. The code should be located under `p06` directory, and the
+source file should be named `06.c`. The output format must be precise, and you
+must use the `scanf` function here to read the numbers. Security is of no
+importance here. You may create a Makefile, but it is not necessary. Ensure that
+you can compile your code with the following flags `-static -fno-pie -no-pie`.
+
+```bash
+./06
+10 20
+10 + 20 = 30
+```
+
 ### Documentation
 
     man make
@@ -351,15 +466,11 @@ do we need a build system to compile large Java apps?
 #### x86 ISA
 
 * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/en-us/articles/intel-sdm)
-* [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
 * [X86 Opcode Reference](http://ref.x86asm.net/index.html)
 * [X86 Instruction Reference](http://www.felixcloutier.com/x86)
-* [Optimizing Subroutines in Assembly Language](http://www.agner.org/optimize/optimizing_assembly.pdf)
-* [Jump Quick Reference](http://unixwiz.net/techtips/x86-jumps.html)
 
 #### Assemblers
 
-* [Linux assemblers: A comparison of GAS and NASM](https://www.ibm.com/developerworks/library/l-gas-nasm/index.html)
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
 
 ### Books
@@ -367,7 +478,3 @@ do we need a build system to compile large Java apps?
 #### C
 
 * C Programming: A Modern Approach, 2nd Edition by K. N. King
-
-#### x86 Assembly
-
-* Assembly Language for x86 Processors, 7th Edition by Kip R. Irvine
