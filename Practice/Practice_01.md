@@ -414,6 +414,10 @@ will have to do a bit of research on your own. You can use Internet resources to
 find the name of the function to make your code better. Links and Books below
 may also be useful.
 
+```bash
+./04 < /srv/input.txt # 04 should not crash here compared to 03
+```
+
 ## Homework Problem #5: "A bit more C: Increment"
 
 Create several C programs that we will try to rewrite in assembly in the next
@@ -427,6 +431,8 @@ must use the `scanf` function here to read the number. Security is of no
 importance here. You may create a Makefile, but it is not necessary. Ensure that
 you can compile your code with the following flags `-static -fno-pie -no-pie`.
 These flags will be useful in the next lab.
+
+## Sample Input and Output
 
 ```bash
 ./05
@@ -443,11 +449,70 @@ must use the `scanf` function here to read the numbers. Security is of no
 importance here. You may create a Makefile, but it is not necessary. Ensure that
 you can compile your code with the following flags `-static -fno-pie -no-pie`.
 
+## Sample Input and Output
+
 ```bash
 ./06
 10 20
 10 + 20 = 30
 ```
+
+## GitHub Checkpoint #1
+
+For the first GitHub Checkpoint, you need to prepare, commit, and push Problems
+1 through 3 and all the Homework problems for Lab 1 to your private course
+repository on GitHub. You have to get the repository from the instructor if you
+don't have one. Submit the last commit ID without any extra characters
+here on Canvas, pointing to the snapshot where all the problems were ready.
+You may make new commits and resubmit before the deadline multiple times.
+
+Here is the directory strucure and names of the files that you must use.
+
+```
+<Your private GitHub repository>
+├── p01
+│   ├── 01.c
+│   ├── 01.i
+│   ├── 01.O3.s
+│   └── 01.s
+├── p02
+│   ├── 02.c
+│   ├── Makefile
+│   ├── utilities.c
+│   └── utilities.h
+├── p03
+│   └── 03.c
+├── p04
+│   └── 04.c
+├── p05
+│   └── 05.c
+└── p06
+    └── 06.c
+```
+
+Here you can find the commands that will be used to compile your code.
+
+| Problem       | Compilation Command |
+| ------------- | ------------------- |
+| p01: 01.c     | gcc -o 01 01.c      |
+| p02: 02.c,... | make clean && make  |
+| p03: 03.c     | gcc -o 03 03.c      |
+| p04: 04.c     | gcc -o 04 04.c      |
+| p05: 05.c     | gcc -o 05 05.c      |
+| p06: 06.c     | gcc -o 06 06.c      |
+
+Files `01.i`, `01.O3.s`, and `01.s` from `p01` may be checked manually. Ensure
+that you have them in the repository. `01.i` should include some preprocessing
+output generated from `01.c`. `*.s` files must include x86-64 or aarch64
+assembly generated with and without optimizations.
+
+Ensure to not submit any binary files (object files and executables). Your grade
+will be lowered for that. You will get zero for a late submission. You will get
+zero if the auto-grading script cannot parse your commit, clone your repository,
+check out the commit, find your source files under the specific names the
+instructor was using during the class, build the sources, run your programs.
+You will also get zero if your programs' output format is not the same as that
+outlined in samples.
 
 ### Documentation
 
@@ -469,9 +534,11 @@ you can compile your code with the following flags `-static -fno-pie -no-pie`.
 * [X86 Opcode Reference](http://ref.x86asm.net/index.html)
 * [X86 Instruction Reference](http://www.felixcloutier.com/x86)
 
-#### Assemblers
+#### Tools
 
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
+* [GDB Quick Reference](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
+* [Pro Git](https://git-scm.com/book/en/v2)
 
 ### Books
 
