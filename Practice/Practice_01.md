@@ -204,7 +204,7 @@ program on an x86-64 CPU of the server.
 
 Create a program that prints the "hello, world" greeting surrounded by the
 asterisk symbols. To print a line of asterisks, write a separate function
-called `void print_decor_line()`. Note the naming compared to Java.
+called `void print_decor_line(void)`. Note the naming compared to Java.
 
 Perform several experiments. Every time you have to recompile the program, try
 running it if the compilation was successful.
