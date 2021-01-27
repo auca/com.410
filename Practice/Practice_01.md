@@ -283,7 +283,7 @@ LDLIBS=
 
 02.o: 02.c
 
-utilities.o : utilities.c
+utilities.o: utilities.c
 
 .PHONY: clean
 clean:
