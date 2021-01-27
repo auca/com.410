@@ -466,7 +466,7 @@ don't have one. Submit the last commit ID without any extra characters
 here on Canvas, pointing to the snapshot where all the problems were ready.
 You may make new commits and resubmit before the deadline multiple times.
 
-Here is the directory strucure and names of the files that you must use.
+Here is the directory structure with the names of the files that you must use.
 
 ```
 <Your private GitHub repository>
@@ -493,7 +493,7 @@ Here is the directory strucure and names of the files that you must use.
 Here you can find the commands that will be used to compile your code.
 
 | Problem       | Compilation Command |
-| ------------- | ------------------- |
+| :------------ | :------------------ |
 | p01: 01.c     | gcc -o 01 01.c      |
 | p02: 02.c,... | make clean && make  |
 | p03: 03.c     | gcc -o 03 03.c      |
@@ -506,13 +506,13 @@ that you have them in the repository. `01.i` should include some preprocessing
 output generated from `01.c`. `*.s` files must include x86-64 or aarch64
 assembly generated with and without optimizations.
 
-Ensure to not submit any binary files (object files and executables). Your grade
+Ensure not to submit any binary files (object files and executables). Your grade
 will be lowered for that. You will get zero for a late submission. You will get
 zero if the auto-grading script cannot parse your commit, clone your repository,
 check out the commit, find your source files under the specific names the
-instructor was using during the class, build the sources, run your programs.
-You will also get zero if your programs' output format is not the same as that
-outlined in samples.
+instructor was using during the class, build the sources, run your programs. You
+will also get zero if your programs' output format is not the same as that
+outlined in the samples.
 
 ### Documentation
 
