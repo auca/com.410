@@ -437,7 +437,7 @@ These flags will be useful in the next lab.
 ```bash
 ./05
 123
-The number next to 123 is 124.
+124
 ```
 
 ## Homework Problem #6: "A bit more C: Sum of Two Numbers"
@@ -463,8 +463,8 @@ For the first GitHub Checkpoint, you need to prepare, commit, and push Problems
 1 through 3 and all the Homework problems for Lab 1 to your private course
 repository on GitHub. You have to get the repository from the instructor if you
 don't have one. Submit the last commit ID without any extra characters
-here on Canvas, pointing to the snapshot where all the problems were ready.
-You may make new commits and resubmit before the deadline multiple times.
+on Canvas, pointing to the snapshot where all the problems were ready. You may
+make new commits and resubmit before the deadline multiple times.
 
 Here is the directory structure with the names of the files that you must use.
 
@@ -492,14 +492,14 @@ Here is the directory structure with the names of the files that you must use.
 
 Here you can find the commands that will be used to compile your code.
 
-| Problem       | Compilation Command |
-| :------------ | :------------------ |
-| p01: 01.c     | gcc -o 01 01.c      |
-| p02: 02.c,... | make clean && make  |
-| p03: 03.c     | gcc -o 03 03.c      |
-| p04: 04.c     | gcc -o 04 04.c      |
-| p05: 05.c     | gcc -o 05 05.c      |
-| p06: 06.c     | gcc -o 06 06.c      |
+| Problem       | Compilation Command   |
+| :------------ | :-------------------- |
+| p01: 01.c     | `gcc -o 01 01.c`      |
+| p02: 02.c,... | `make clean && make`  |
+| p03: 03.c     | `gcc -o 03 03.c`      |
+| p04: 04.c     | `gcc -o 04 04.c`      |
+| p05: 05.c     | `gcc -o 05 05.c`      |
+| p06: 06.c     | `gcc -o 06 06.c`      |
 
 Files `01.i`, `01.O3.s`, and `01.s` from `p01` may be checked manually. Ensure
 that you have them in the repository. `01.i` should include some preprocessing
@@ -518,6 +518,7 @@ outlined in the samples.
 
     man make
     man gcc
+    man ld
     man as
     man gdb
     man objdump
@@ -544,4 +545,5 @@ outlined in the samples.
 
 #### C
 
+* C Programming Language, 2nd Edition by Brian W. Kernighan and Dennis M. Ritchie
 * C Programming: A Modern Approach, 2nd Edition by K. N. King
