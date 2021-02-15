@@ -492,14 +492,14 @@ Here is the directory structure with the names of the files that you must use.
 
 Here you can find the commands that will be used to compile your code.
 
-| Problem       | Compilation Command   |
-| :------------ | :-------------------- |
-| p01: 01.c     | `gcc -o 01 01.c`      |
-| p02: 02.c,... | `make clean && make`  |
-| p03: 03.c     | `gcc -o 03 03.c`      |
-| p04: 04.c     | `gcc -o 04 04.c`      |
-| p05: 05.c     | `gcc -o 05 05.c`      |
-| p06: 06.c     | `gcc -o 06 06.c`      |
+| Problem       | Compilation Command                                   |
+| :------------ | :---------------------------------------------------- |
+| p01: 01.c     | `gcc -o 01 01.c`                                      |
+| p02: 02.c,... | `make clean && make`                                  |
+| p03: 03.c     | `gcc -g -fno-stack-protector -z execstack -o 03 03.c` |
+| p04: 04.c     | `gcc -o 04 04.c`                                      |
+| p05: 05.c     | `gcc -o 05 05.c`                                      |
+| p06: 06.c     | `gcc -o 06 06.c`                                      |
 
 Files `01.i`, `01.O3.s`, and `01.s` from `p01` may be checked manually. Ensure
 that you have them in the repository. `01.i` should include some preprocessing
