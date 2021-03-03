@@ -17,7 +17,7 @@ and compiler flags will disable generation of position-independent code (PIC) to
 simplify our assembly.
 
 ```bash
-gcc -o 07 07.x86-64.s
+gcc -static -fno-pie -no-pie -o 07 07.x86-64.s
 ```
 
 Run the program.
@@ -31,7 +31,7 @@ Repeat the steps, but in aarch64 assembly. Use the `aarch64-linux-gnu`
 cross compiler to generate the executable.
 
 ```bash
-aarch64-linux-gnu-gcc -o 07 07.aarch64.s
+aarch64-linux-gnu-gcc -static -fno-pie -no-pie -o 07 07.aarch64.s
 ```
 
 Run the program.
@@ -48,7 +48,7 @@ user and outputs its value incremented by one. Use GDB to debug your application
 in case of errors.
 
 ```bash
-gcc -o 08 08.x86-64.s
+gcc -static -fno-pie -no-pie -o 08 08.x86-64.s
 ./08
 123
 124
@@ -57,7 +57,7 @@ gcc -o 08 08.x86-64.s
 Create the same program but in aarch64 assembly.
 
 ```bash
-aarch64-linux-gnu-gcc -o 08 08.aarch64.s
+aarch64-linux-gnu-gcc -static -fno-pie -no-pie -o 08 08.aarch64.s
 ./08
 123
 124
@@ -72,7 +72,7 @@ Write an x86-64 assembly program that reads two numbers of type `long` from the
 user and outputs their sum. Use GDB to debug your application in case of errors.
 
 ```bash
-gcc -o 09 09.x86-64.s
+gcc -static -fno-pie -no-pie -o 09 09.x86-64.s
 ./09
 10 20
 10 + 20 = 30
@@ -81,7 +81,7 @@ gcc -o 09 09.x86-64.s
 Create the same program but in aarch64 assembly.
 
 ```bash
-aarch64-linux-gnu-gcc -o 09 09.aarch64.s
+aarch64-linux-gnu-gcc -static -fno-pie -no-pie -o 09 09.aarch64.s
 ./08
 10 20
 10 + 20 = 30
