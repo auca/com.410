@@ -104,6 +104,25 @@ int main(void)
 }
 ```
 
+## Homework Problem #15: "Change Return Address"
+
+Write two programs in x86-64 and aarch64 assembly that get one C
+String argument from `argv` with a path to an executable (e.g., `/bin/yes`),
+and overwrite the return address in such a way, that instead of returning to
+`libc_start_main` runtime function from `main`, the programs return to a
+function `system` which starts the specified program from the argument. Read
+more about the `system` function with the help of `man`. Think where to put
+arguments so that function `system` can start the specified program.
+
+```bash
+gcc (and aarch64-linux-gnu-gcc) -static -fno-pie -no-pie -o 15 15.x86-64.s
+echo $$ 
+588728 # could be any other process ID of the shell
+./15
+$ echo $$
+590642 # could be any other process ID, but it should not be equal to the one above
+```
+
 ### Documentation
 
     man make
