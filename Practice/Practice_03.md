@@ -54,7 +54,7 @@ echo $?
 0
 ```
 
-## Problem #14: "Arguments to Functions"
+## Problem #15: "Arguments to Functions"
 
 Recreate the following C program in x86-64 and aarch64 assembly manually. Note
 that parameters are of type `int`, but the return types of functions are `long`.
@@ -104,7 +104,7 @@ int main(void)
 }
 ```
 
-## Homework Problem #15: "Change Return Address"
+## Homework Problem #16: "Change Return Address"
 
 Write two programs in x86-64 and aarch64 assembly that get one C
 String argument from `argv` with a path to an executable (e.g., `/bin/yes`),
