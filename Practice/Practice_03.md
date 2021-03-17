@@ -106,22 +106,82 @@ int main(void)
 
 ## Homework Problem #16: "Change Return Address"
 
-Write two programs in x86-64 and aarch64 assembly that get one C
-String argument from `argv` with a path to an executable (e.g., `/bin/yes`),
-and overwrite the return address in such a way, that instead of returning to
+Write two programs in x86-64 and aarch64 assembly that get one C String argument
+from `argv` at index 1 with a path to an executable (e.g., `/bin/yes`), and
+overwrite the return address in such a way, that instead of returning to
 `libc_start_main` runtime function from `main`, the programs return to a
 function `system` which starts the specified program from the argument. Read
 more about the `system` function with the help of `man`. Think where to put
-arguments so that function `system` can start the specified program.
+arguments so that function `system` can start the specified program. Remember
+that GDB is your friend.
 
 ```bash
-gcc (and aarch64-linux-gnu-gcc) -static -fno-pie -no-pie -o 15 15.x86-64.s
-echo $$ 
-588728 # could be any other process ID of the shell
-./15
-$ echo $$
-590642 # could be any other process ID, but it should not be equal to the one above
+gcc (and aarch64-linux-gnu-gcc) -static -fno-pie -no-pie -o 16 16.x86-64.s
+./16 /bin/yes
+y
+y
+y
+y
+y
+y
+... (CTRL+C to stop)
 ```
+
+```bash
+gcc (and aarch64-linux-gnu-gcc) -static -fno-pie -no-pie -o 16 16.x86-64.s
+echo $$
+1222853 # or any other main server shell ID
+./16 /bin/sh
+$ echo $$
+1222930 # or any other shell ID different from the one above
+exit
+```
+
+## GitHub Checkpoint #3
+
+For the third GitHub Checkpoint, you need to prepare, commit, and push Problems
+13 through 15 and the Homework problem for Lab 3 to your private course
+repository on GitHub. Submit the last commit ID without any extra characters on
+Canvas, pointing to the snapshot where all the problems were ready. You may make
+new commits and resubmit before the deadline multiple times.
+
+Here is the directory structure with the names of the files that you must use.
+
+```
+<Your private GitHub repository>
+...previous works
+├── p13
+│   ├── 13.aarch64.s
+│   └── 13.x86-64.s
+├── p14
+│   ├── 14.aarch64.s
+│   └── 14.x86-64.s
+├── p15
+│   ├── 15.aarch64.s
+│   └── 15.x86-64.s
+└── p16
+    ├── 16.aarch64.s
+    └── 16.x86-64.s
+```
+
+Here you can find the commands that will be used to compile your code.
+
+| Problem                        | Compilation Command                          |
+| :----------------------------- | :------------------------------------------- |
+| p13: 13.x86-64.s, 13.aarch64.s | `gcc* -static -fno-pie -no-pie -o 13 13.*.s` |
+| p14: 14.x86-64.s, 14.aarch64.s | `gcc* -static -fno-pie -no-pie -o 14 14.*.s` |
+| p15: 15.x86-64.s, 15.aarch64.s | `gcc* -static -fno-pie -no-pie -o 15 15.*.s` |
+| p16: 16.x86-64.s, 16.aarch64.s | `gcc* -static -fno-pie -no-pie -o 16 16.*.s` |
+
+...where `*` is a cross compiler or ISA name.
+
+Ensure not to submit any binary files (object files and executables). Your grade
+will be lowered for that. You will get zero for a late submission. You will get
+zero if the auto-grading script cannot parse your commit, clone your repository,
+check out the commit, find your source files under the specific names the
+instructor was using during the class, build the sources, run your programs. You
+will also get zero if your programs' output format is not the same as that
+outlined in the samples.
 
 ### Documentation
 
