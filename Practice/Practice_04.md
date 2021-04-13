@@ -24,11 +24,11 @@ the source file `17.inline.c`.
 
 Write a program `18` to read characters from the user in a `while` loop. Count
 the characters, stop on `EOF` condition, and print the total number of
-characters. Take a look at the assembly in GDB. Step through the code to analyze
+characters. Take a look at the assembly in R2. Step through the code to analyze
 how it works. Try to rewrite your program by only using one-way if constructs
 and the `goto` statement to jump in the code's flow to various labels similar to
 how the assembly was structured in GDB for the `while` loop. The source file
-should be named `18.goto.c` Rewrite the code for the `while` loop in x86
+should be named `18.goto.c` Rewrite the code for the `while` loop in x86-64
 inline assembly. Name the source file `18.inline.c`.
 
 ## Problem #19: "ASCII Table"
@@ -39,16 +39,16 @@ every row. Represent the constant 16 or 32 in a macro definition. Take a look at
 the assembly in GDB. Step through the code to analyze how it works. Try to
 rewrite your program by only using one-way if constructs and the `goto` statement
 to jump in the code's flow to various labels similar to how the assembly was
-structured in GDB for the `for` loop. The source file should be named
-`07.goto.c` Rewrite the `for` loopin 32-bit x86 inline assembly. Name the source
-file `07.inline.c`.
+structured in R2 for the `for` loop. The source file should be named
+`19.goto.c` Rewrite the `for` loop in x86-64 inline assembly. Name the source
+file `19.inline.c`.
 
 ## Problem #20: "Many Conditions"
 
-Write a program `08` to print the season's name (Winter, Spring, Summer, or
+Write a program `20` to print the season's name (Winter, Spring, Summer, or
 Fall) for a given month number (from 1 to 12). For any number outside of the
 range from 1 to 12, the program should print the message "Invalid month number."
-Write a version of a program (`08.c`) with a multi-way `if` construct. Use
+Write a version of a program (`20.c`) with a multi-way `if` construct. Use
 logical operators inside the `if` conditions. Compile the program and analyze
 its assembly with Radare2 in graph mode. Rewrite the source file replacing the
 `if` construct and logical operators with a `switch` construct. Compile and
@@ -58,8 +58,8 @@ the `if` assembly version.
 Rewrite your program by only using a one-way if construct and the `goto`
 statement to jump in the code's flow to various labels similar to how the
 assembly was structured in R2 for the `switch` construct. The source file should
-be named `08.goto.c`. Rewrite the `switch` construct in x86-64 inline assembly
-in `08.inline.c`.
+be named `20.goto.c`. Rewrite the `switch` construct in x86-64 inline assembly
+in `20.inline.c`.
 
 ### Documentation
 
