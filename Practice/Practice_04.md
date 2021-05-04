@@ -61,6 +61,26 @@ assembly was structured in R2 for the `switch` construct. The source file should
 be named `20.goto.c`. Rewrite the `switch` construct in x86-64 inline assembly
 in `20.inline.c`.
 
+## Problem #21-22: "Pointers and Arrays"
+
+Write a program `21-1` to swap two numbers in a function called `swap`. Write
+an incorrect version first (without the use of pointers). Check out the
+assembly in the [Godbolt Compiler Explorer](https://godbolt.org) with the
+`-O3` flag. Write a correct working version `21-2`. Compare the new assembly to
+the previous one. Try adding the `-fno-inline` in Godbolt. Compare the
+assembly again.
+
+Write a program `22-1` to find a sum of an array of random integers. Create two
+functions named `fill_with_random` and `sum` that can prepare and sum the array.
+Create the array on the stack in `22-1`. Create the array on the heap  with
+the `malloc` function in `22-2`. Do not forget to release the memory with the
+`free` function. Check out the assembly of both programs in the
+[Godbolt Compiler Explorer](https://godbolt.org).
+
+Write a program `22-3` to find a sum of all the numbers passed as command-line
+arguments to the program. Convert the strings to integers with the `strtol`
+function. Check out the assembly in the [Godbolt Compiler Explorer](https://godbolt.org).
+
 ### Documentation
 
     man make
