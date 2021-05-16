@@ -27,7 +27,7 @@ the characters, stop on `EOF` condition, and print the total number of
 characters. Take a look at the assembly in R2. Step through the code to analyze
 how it works. Try to rewrite your program by only using one-way if constructs
 and the `goto` statement to jump in the code's flow to various labels similar to
-how the assembly was structured in GDB for the `while` loop. The source file
+how the assembly was structured in R2 for the `while` loop. The source file
 should be named `18.goto.c` Rewrite the code for the `while` loop in x86-64
 inline assembly. Name the source file `18.inline.c`.
 
@@ -81,6 +81,53 @@ Write a program `22-3` to find a sum of all the numbers passed as command-line
 arguments to the program. Convert the strings to integers with the `strtol`
 function. Check out the assembly in the [Godbolt Compiler Explorer](https://godbolt.org).
 
+## GitHub Checkpoint #4
+
+For the fourth GitHub Checkpoint, you need to prepare, commit, and push Problems
+17 through 22 to your private course repository on GitHub. Submit the last
+commit ID without any extra characters on Canvas, pointing to the snapshot where
+all the problems were ready. You may make new commits and resubmit before the
+deadline multiple times.
+
+Here is the directory structure with the names of the files that you must use.
+
+```
+<Your private GitHub repository>
+...previous works
+├── p17
+│   ├── 17.c
+│   ├── 17.goto.c
+│   ├── 17.i
+│   └── 17.inline.c
+├── p18
+│   ├── 18.c
+│   ├── 18.goto.c
+│   └── 18.inline.c
+├── p19
+│   ├── 19.c
+│   ├── 19.goto.c
+│   └── 19.inline.c
+├── p20
+│   ├── 20.c
+│   ├── 20.goto.c
+│   └── 20.inline.c
+├── p21
+│   ├── 21-1.c
+│   └── 21-2.c
+└── p22
+    ├── 22-1.c
+    ├── 22-2.c
+    └── 22-3.c
+```
+
+Ensure not to submit any binary files (object files and executables). Your grade
+will be lowered for that. You will get zero for a late submission. You will get
+zero if the auto-grading script cannot parse your commit, clone your repository,
+check out the commit, find your source files under the specific names the
+instructor was using during the class, build the sources, run your programs. You
+will also get zero if your programs' output format is not the same as that
+outlined in the samples.
+
 ### Documentation
 
     man make
@@ -105,16 +152,11 @@ function. Check out the assembly in the [Godbolt Compiler Explorer](https://godb
 * [Optimizing Subroutines in Assembly Language](http://www.agner.org/optimize/optimizing_assembly.pdf)
 * [Intel x86 JUMP Quick Reference](http://www.unixwiz.net/techtips/x86-jumps.html)
 
-#### ARM64 ISA
-
-* [Arm Architecture Reference Manual Armv8, for Armv8-A architecture profile](https://developer.arm.com/documentation/ddi0487/latest)
-* [Arm Instruction Set Reference Guide](https://developer.arm.com/documentation/100076/0100/a64-instruction-set-reference)
-* [Learn the architecture: AArch64 Instruction Set Architecture](https://developer.arm.com/documentation/102374/0101)
-
 #### Tools
 
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
 * [GDB Quick Reference](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
+* [R2 Book](https://book.rada.re/index.html)
 * [Pro Git](https://git-scm.com/book/en/v2)
 
 ### Books
@@ -127,4 +169,3 @@ function. Check out the assembly in the [Godbolt Compiler Explorer](https://godb
 #### Assembly
 
 * Assembly Language for x86 Processors, 7th Edition by Kip R. Irvine
-* ARM 64-Bit Assembly Language by Larry D. Pyeatt and William Ughetta
