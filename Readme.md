@@ -5,42 +5,20 @@ Computer Architecture
 
 General course information, time, rules, grading, and books
 
-* <https://github.com/auca/com.410/blob/master/Syllabus/AUCA_COM-410_Spring_2021_Syllabus.pdf>
+* <https://github.com/auca/com.410/blob/master/Syllabus/AUCA_COM-410_Spring_2022_Syllabus.pdf>
 
 ## Recordings
 
-View previous class recordings
+View this semester's class recordings
 
-### Lectures
+### Friday 12:45
 
-#### Tuesday 10:50
+* <https://youtube.com/playlist?list=PLHcEzCb_lW6c3nIBN9r99hp5aP9Ab105S>
 
-* <https://youtube.com/playlist?list=PLHcEzCb_lW6cdyMqDbS7gR0imqrmvkOib>
+### Friday 14:10
 
-### Labs
+* <https://youtube.com/playlist?list=PLHcEzCb_lW6eIy0tRctcM17KNXQgeyJEt>
 
-#### Tuesday 12:45
+### Friday 15:35
 
-* <https://youtube.com/playlist?list=PLHcEzCb_lW6di053H1ErhuGX8_VNcTKmq>
-
-#### Tuesday 14:10
-
-* <https://youtube.com/playlist?list=PLHcEzCb_lW6dNWICP6lfwZFpVLJ8In5oK>
-
-## Exams
-
-### Practice Midterm Signup
-
-* <https://docs.google.com/spreadsheets/d/1IWRNTpQ_kcwBBJFZU-RaSps_owe36SWzUMA9jQlpngs/edit?usp=sharing>
-
-### Practice Midterm Task List
-
-* <https://docs.google.com/spreadsheets/d/1ZMibyUCRvT2QhSG9ZU8o7r8eZuJc3wSsed0A16L4SLM/edit?usp=sharing>
-
-### Practice Final Signup
-
-* <https://docs.google.com/spreadsheets/d/1yd8V5a1gkow1N40YC9blHzZJLLJvqDHqXjYK1WPuMss/edit?usp=sharing>
-
-### Practice Final Task List
-
-* <https://docs.google.com/spreadsheets/d/1-qDWyUsMnv5yXtV2r7buJib0yYrbXAPBuDiODAByNRY/edit?usp=sharing>
+* <https://youtube.com/playlist?list=PLHcEzCb_lW6f87OIThdGRkPyu7n7mMPyE>
