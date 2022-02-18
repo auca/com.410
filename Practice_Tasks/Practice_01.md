@@ -402,7 +402,7 @@ find the name of the function to make your code better. Links and Books below
 may also be useful.
 
 ```bash
-./04 < /srv/input.txt # 04 should not crash here compared to 03
+./04 < /srv/input.txt # 04 should not start another program
 ```
 
 ## Homework Problem #5: "A bit more C: Increment"
