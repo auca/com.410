@@ -156,6 +156,7 @@ Here is the directory structure with the names of the files that you must use.
 ```
 <Your private GitHub repository>
 ...previous works
+lab-02
 ├── p07
 │   ├── 07.x86-64.s
 │   └── 07.aarch64.s
