@@ -402,7 +402,9 @@ find the name of the function to make your code better. Links and Books below
 may also be useful.
 
 ```bash
-./04 < /srv/input.txt # 04 should not start another program
+./04 < /srv/input.txt # 04 should not start another program or crash
+echo $?
+0
 ```
 
 ## Homework Problem #5: "A bit more C: Increment"
@@ -503,12 +505,17 @@ outlined in the samples.
 
 ### Documentation
 
-    man make
+    man vim
     man gcc
+    man make
     man ld
     man as
-    man gdb
     man objdump
+    man gdb
+
+    man 3 puts
+    man 3 gets
+    man 3 printf
 
 ### Links
 
