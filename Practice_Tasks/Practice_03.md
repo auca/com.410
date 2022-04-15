@@ -54,6 +54,33 @@ int main(void)
 }
 ```
 
+## Problem #14: "Local Variables"
+
+Recreate the following C program in x86-64 and aarch64 assembly manually.
+
+```C
+#include <stdio.h>
+
+int main(void)
+{
+    long numToMul, numToDiv;
+
+    long num, times;
+    scanf("%ld\n%ld", &num, &times);
+    numToMul = num;
+    numToDiv = num;
+
+    for (char i = 0; i < (char) times; ++i) {
+        numToMul *= 2;
+        numToDiv /= 2;
+    }
+    
+    printf("%ld, %ld\n", numToMul, numToDiv);
+
+    return 0;
+}
+```
+
 ### Documentation
 
     man make
