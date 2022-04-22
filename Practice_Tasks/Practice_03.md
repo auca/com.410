@@ -81,6 +81,35 @@ int main(void)
 }
 ```
 
+## Problem #15: "Sections"
+
+Recreate the following C program in x86-64 and aarch64 assembly manually.
+
+```C
+#include <stdio.h>                                                               
+                                                                                 
+const unsigned long const_init_array[10240] = { 0xDEADBEEF };                    
+static unsigned long const_static_uninit_array[10240];                           
+                                                                                 
+int main(void)                                                                   
+{                                                                                
+    unsigned long local_array[] = {                                              
+        42, 2, 3, 4, 5, 6, 7, 8, 9, 43                           
+    };                                                                           
+                                                                                 
+    printf(                                                                      
+        "const_init_array first and last elems: %#lX, %#lX\n"                    
+        "const_static_uninit_array first and last elems: %#lX, %#lX\n"           
+        "local_array first and last elems: %#lX, %#lX\n",                        
+        const_init_array[0], const_init_array[10239],                            
+        const_static_uninit_array[0], const_static_uninit_array[10239],          
+        local_array[0], local_array[9]                                           
+    );                                                                           
+                                                                                 
+    return 0;                                                                    
+} v
+```
+
 ### Documentation
 
     man make
