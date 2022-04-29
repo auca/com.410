@@ -117,7 +117,7 @@ Recreate the following C program in x86-64 and aarch64 assembly manually.
 ```C
 #include <stdio.h>
 
-static long swap(long *a, long *b)
+static void swap(long *a, long *b)
 {
     long temp = *a;
     *a = *b;
