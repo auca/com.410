@@ -60,6 +60,7 @@ int main(void)
 * [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
 * [X86 Opcode Reference](http://ref.x86asm.net/index.html)
 * [X86 Instruction Reference](http://www.felixcloutier.com/x86)
+* [Intel x86 JUMP Quick Reference](http://www.unixwiz.net/techtips/x86-jumps.html)
 * [Optimizing Subroutines in Assembly Language](http://www.agner.org/optimize/optimizing_assembly.pdf)
 
 #### ARM64 ISA
