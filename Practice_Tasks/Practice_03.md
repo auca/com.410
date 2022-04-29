@@ -74,7 +74,7 @@ int main(void)
         numToMul *= 2;
         numToDiv /= 2;
     }
-    
+
     printf("%ld, %ld\n", numToMul, numToDiv);
 
     return 0;
@@ -86,29 +86,145 @@ int main(void)
 Recreate the following C program in x86-64 and aarch64 assembly manually.
 
 ```C
-#include <stdio.h>                                                               
-                                                                                 
-const unsigned long const_init_array[10240] = { 0xDEADBEEF };                    
-static unsigned long const_static_uninit_array[10240];                           
-                                                                                 
-int main(void)                                                                   
-{                                                                                
-    unsigned long local_array[] = {                                              
-        42, 2, 3, 4, 5, 6, 7, 8, 9, 43                           
-    };                                                                           
-                                                                                 
-    printf(                                                                      
-        "const_init_array first and last elems: %#lX, %#lX\n"                    
-        "const_static_uninit_array first and last elems: %#lX, %#lX\n"           
-        "local_array first and last elems: %#lX, %#lX\n",                        
-        const_init_array[0], const_init_array[10239],                            
-        const_static_uninit_array[0], const_static_uninit_array[10239],          
-        local_array[0], local_array[9]                                           
-    );                                                                           
-                                                                                 
-    return 0;                                                                    
-} v
+#include <stdio.h>
+
+const unsigned long arr1[10240] = { 0xDEADBEEF };
+static unsigned long arr2[10240];
+
+int main(void)
+{
+    unsigned long arr3[] = {
+        42, 2, 3, 4, 5, 6, 7, 8, 9, 43
+    };
+
+    printf(
+        "arr1 first and last elems: %#lX, %#lX\n"
+        "arr2 first and last elems: %#lX, %#lX\n"
+        "arr3 first and last elems: %#lX, %#lX\n",
+        arr1[0], arr1[10239],
+        arr2[0], arr2[10239],
+        arr3[0], arr3[9]
+    );
+
+    return 0;
+}
 ```
+
+## Homework Problem #16: "Swap with Pointers"
+
+Recreate the following C program in x86-64 and aarch64 assembly manually.
+
+```C
+#include <stdio.h>
+
+static long swap(long *a, long *b)
+{
+    long temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main(void)
+{
+    long a, b;
+    scanf("%ld %ld", &a, &b);
+
+    printf("Before swap: %ld %ld\n", a, b);
+    swap(&a, &b);
+    printf("After swap: %ld %ld\n", a, b);
+
+    return 0;
+}
+```
+
+## Homework Problem #17: "Structs"
+
+Recreate the following C program in x86-64 and aarch64 assembly manually.
+
+```C
+#include <stdio.h>
+
+typedef struct _v2d {
+    long x;
+    long y;
+} v2d_t;
+
+static long dot(v2d_t a, v2d_t b)
+{
+    return a.x * b.x + a.y * b.y;
+}
+
+static long dot_ptr(v2d_t *a, v2d_t *b)
+{
+    return a->x * b->x + a->y * b->y;
+}
+
+int main(void)
+{
+    v2d_t a, b;
+
+    scanf("%ld %ld %ld %ld", &a.x, &a.y, &b.x, &b.y);
+
+    long res1 = dot(a, b);
+    printf("%ld\n", res1);
+
+    long res2 = dot_ptr(&a, &b);
+    printf("%ld\n", res2);
+
+    return 0;
+}
+```
+
+## GitHub Checkpoint #3
+
+For the third GitHub Checkpoint, you need to prepare, commit, and push Problems
+13 through 15 and all the Homework problems for Lab 3 to your private course
+repository on GitHub. Submit the last commit ID without any extra characters on
+Canvas, pointing to the snapshot where all the problems were ready. You may make
+new commits and resubmit before the deadline multiple times.
+
+Here is the directory structure with the names of the files that you must use.
+
+```
+<Your private GitHub repository>
+...previous works
+lab-03
+├── p13
+│   ├── 13.x86-64.s
+│   └── 13.aarch64.s
+├── p14
+│   ├── 14.x86-64.s
+│   └── 14.aarch64.s
+├── p15
+│   ├── 15.x86-64.s
+│   └── 15.aarch64.s
+├── p16
+│   ├── 16.x86-64.s
+│   └── 16.aarch64.s
+└── p17
+    ├── 17.x86-64.s
+    └── 17.aarch64.s
+```
+
+Here you can find the commands that will be used to compile your code.
+
+| Problem                        | Compilation Command                          |
+| :----------------------------- | :------------------------------------------- |
+| p13: 13.x86-64.s, 13.aarch64.s | `gcc* -static -fno-pie -no-pie -o 13 13.*.s` |
+| p14: 14.x86-64.s, 14.aarch64.s | `gcc* -static -fno-pie -no-pie -o 14 14.*.s` |
+| p15: 15.x86-64.s, 15.aarch64.s | `gcc* -static -fno-pie -no-pie -o 15 15.*.s` |
+| p16: 16.x86-64.s, 16.aarch64.s | `gcc* -static -fno-pie -no-pie -o 16 16.*.s` |
+| p17: 17.x86-64.s, 17.aarch64.s | `gcc* -static -fno-pie -no-pie -o 17 17.*.s` |
+
+...where `*` is a cross compiler or ISA name.
+
+Ensure not to submit any binary files (object files and executables). Your grade
+will be lowered for that. You will get zero for a late submission. You will get
+zero if the auto-grading script cannot parse your commit, clone your repository,
+check out the commit, find your source files under the specific names the
+instructor was using during the class, build the sources, run your programs. You
+will also get zero if your programs' output format is not the same as that
+outlined in the samples.
 
 ### Documentation
 
