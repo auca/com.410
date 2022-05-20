@@ -5,7 +5,8 @@ In this task, we will work with structured programming constructs.
 
 ## Problem #18: "if"
 
-Recreate the following C program in x86-64 and aarch64 assembly manually.
+Analyze the structured constructs of the C program below with r2 reverse
+engineering tool. Focus on how the `if` construct is implemented.
 
 ```C
 #include <stdio.h>
@@ -46,7 +47,8 @@ Recreate the following C program in x86-64 and aarch64 assembly manually.
 ```c
 #include <stdio.h>
 
-#include "utilities.h" // implement `random_in_range` and `init_random` on your own with `rand` from `stdlib.h`                                                  
+#include "utilities.h" // Implement `random_in_range` and `init_random` on your
+                       // own with `rand` from `stdlib.h`.
 
 int main(void)
 {
@@ -80,9 +82,56 @@ int main(void)
 
     printf("The card you have picked is %s of %s.\n", rank, suit);
 
-    return 0;                                                                    
-} 
+    return 0;
+}
 ```
+
+## Problem #20: "loops"
+
+Analyze the structured constructs of the C program below with r2 reverse
+engineering tool. Focus on how the `do/while`, `while`, and `for` constructs are
+implemented.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "int_stack.h" // Implement `int_stack_create`, `int_stack_push`, and
+                       // `int_stack_pop` on your own. Use a `for` loop in some
+                       // of your methods.
+
+int main(void)
+{
+    int_stack_t stack = int_stack_create();
+
+    long input;
+    do {
+        scanf("%ld", &input);
+        int_stack_push(&stack, input);
+    } while (input != 0);
+
+    int_stack_pop(&stack);
+
+    while (stack.count > 0) {
+        long num = int_stack_pop(&stack);
+        printf(stack.count != 0 ? "%ld " : "%ld\n", num);
+    }
+
+    return 0;
+}
+```
+
+## Homework Problem #21: "if in assembly"
+
+Recreate the C program from Problem #18 in x86-64 and aarch64 assembly manually.
+
+## Homework Problem #22: "Loops in assembly"
+
+Recreate the `20.c` file from Problem #20 in x86-64 and aarch64 assembly
+manually. Leave the `int_stack.c` and `.h` files as is. Modify the `Makefile`
+to produce three executables from the C file, from the x86-64 assembly, and from
+the aarch64 assembly as it was done in Problem #19.
 
 ### Documentation
 
