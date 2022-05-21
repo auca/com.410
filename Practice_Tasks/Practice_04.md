@@ -118,6 +118,8 @@ int main(void)
         printf(stack.count != 0 ? "%ld " : "%ld\n", num);
     }
 
+    int_stack_destroy(&stack);
+
     return 0;
 }
 ```
@@ -132,6 +134,58 @@ Recreate the `20.c` file from Problem #20 in x86-64 and aarch64 assembly
 manually. Leave the `int_stack.c` and `.h` files as is. Modify the `Makefile`
 to produce three executables from the C file, from the x86-64 assembly, and from
 the aarch64 assembly as it was done in Problem #19.
+
+## GitHub Checkpoint #4
+
+For the third GitHub Checkpoint, you need to prepare, commit, and push Problems
+18 through 20 and all the Homework problems for Lab 4 to your private course
+repository on GitHub. Submit the last commit ID without any extra characters on
+Canvas, pointing to the snapshot where all the problems were ready. You may make
+new commits and resubmit before the deadline multiple times.
+
+Here is the directory structure with the names of the files that you must use.
+Note that Homework problems go into the` p18` and `p20` directories.
+
+```
+<Your private GitHub repository>
+...previous works
+lab-04
+├── p18
+│   ├── 18.x86-64.s
+│   └── 18.aarch64.s
+├── p19
+│   ├── 19.x86-64.s
+│   ├── 19.aarch64.s
+│   ├── 19.c
+│   ├── utilities.c
+│   ├── utilities.h
+│   └── Makefile
+└── p20
+    ├── 20.x86-64.s
+    ├── 20.aarch64.s
+    ├── 20.c
+    ├── int_stack.c
+    ├── int_stack.h
+    └── Makefile
+```
+
+Here you can find the commands that will be used to compile your code.
+
+| Problem                        | Compilation Command                          |
+| :----------------------------- | :------------------------------------------- |
+| p18: 18.x86-64.s, 18.aarch64.s | `gcc* -static -fno-pie -no-pie -o 18 18.*.s` |
+| p19: 19.x86-64.s, 19.aarch64.s | `make`                                       |
+| p20: 20.x86-64.s, 20.aarch64.s | `make`                                       |
+
+...where `*` is a cross compiler or ISA name.
+
+Ensure not to submit any binary files (object files and executables). Your grade
+will be lowered for that. You will get zero for a late submission. You will get
+zero if the auto-grading script cannot parse your commit, clone your repository,
+check out the commit, find your source files under the specific names the
+instructor was using during the class, build the sources, run your programs. You
+will also get zero if your programs' output format is not the same as that
+outlined in the samples.
 
 ### Documentation
 
