@@ -1,5 +1,5 @@
-Computer Architecture
-=====================
+Principles of Computing Systems, Computer Architecture
+======================================================
 
 ## Syllabus
 
