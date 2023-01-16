@@ -5,7 +5,7 @@ Principles of Computing Systems, Computer Architecture
 
 General course information, time, rules, grading, and books
 
-* <https://github.com/auca/com.123-410/blob/master/Syllabus/AUCA_COM-410_Spring_2023_Syllabus.pdf>
+* <https://github.com/auca/com.123-410/blob/master/Syllabus/AUCA_COM-123-410_Spring_2023_Syllabus.pdf>
 
 ## Recordings
 
