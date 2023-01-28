@@ -11,4 +11,10 @@ General course information, time, rules, grading, and books
 
 View this semester's class recordings
 
+### COM-123, Principles of Computing Systems
+
 * <https://youtube.com/playlist?list=PLHcEzCb_lW6dDn6lMJu7gc5fEM-clfZPD>
+
+### COM-410, Computer Architecture
+
+* <https://youtube.com/playlist?list=PLHcEzCb_lW6cIN6cA_Oq4PTRBioESR-FA>
