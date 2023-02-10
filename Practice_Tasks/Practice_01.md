@@ -274,7 +274,7 @@ utilities.o: utilities.c
 
 .PHONY: clean
 clean:
-    rm -rf 02.o utilities.o 02
+	rm -rf 02.o utilities.o 02
 ```
 
 Ensure that you have a `<TAB>` character befor `rm`.
