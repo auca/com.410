@@ -188,7 +188,7 @@ Here is the directory structure with the names of the files that you must use.
 ```
 <Your private GitHub repository>
 ...previous works
-lab-03
+lab-3
 ├── p13
 │   ├── 13.x86-64.s
 │   └── 13.aarch64.s

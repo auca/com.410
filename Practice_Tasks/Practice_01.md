@@ -458,7 +458,7 @@ make new commits and resubmit before the deadline multiple times.
 Here is the directory structure with the names of the files that you must use.
 
 ```
-lab-01
+lab-1
 ├── p01
 │   ├── 01.c
 │   ├── 01.i

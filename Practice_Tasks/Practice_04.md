@@ -149,7 +149,7 @@ Note that Homework problems go into the` p18` and `p20` directories.
 ```
 <Your private GitHub repository>
 ...previous works
-lab-04
+lab-4
 ├── p18
 │   ├── 18.x86-64.s
 │   └── 18.aarch64.s
