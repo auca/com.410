@@ -54,63 +54,129 @@ int main(void)
 }
 ```
 
-## Problem #14: "Local Variables"
+## Problem #14-15: "if" and "switch"
 
-Recreate the following C program in x86-64 and aarch64 assembly manually.
+Analyze the structured constructs of the C program below with `gdb` or `radare2`.
+Focus on how the `if` constructs are implemented.
 
 ```C
 #include <stdio.h>
 
 int main(void)
 {
-    long numToMul, numToDiv;
+    long num1, num2;
+    scanf("%ld %ld", &num1, &num2);
 
-    long num, times;
-    scanf("%ld\n%ld", &num, &times);
-    numToMul = num;
-    numToDiv = num;
-
-    for (char i = 0; i < (char) times; ++i) {
-        numToMul *= 2;
-        numToDiv /= 2;
+    if ((num1 + num2) > 0) {
+        puts("The sum is not negative.");
     }
 
-    printf("%ld, %ld\n", numToMul, numToDiv);
+    if ((num1 + num2) % 2 == 0) {
+        puts("The sum is even.");
+    } else {
+        puts("The sum is odd.");
+    }
+
+    char *msg;
+    if (num1 > num2) {
+        msg = "%ld is greater than %ld.\n";
+    } else if (num1 < num2) {
+        msg = "%ld is less than %ld.\n";
+    } else {
+        msg = "%ld is equal to %ld.\n";
+    }
+    printf(msg, num1, num2);
 
     return 0;
 }
 ```
 
-## Problem #15: "Sections"
+Make the program below work by adding the `utilities.h` file. Analyze the
+structured constructs of the C program below with `gdb` or `radare2`. Focus on
+how the `switch` construct is implemented.
 
-Recreate the following C program in x86-64 and aarch64 assembly manually.
-
-```C
+```c
 #include <stdio.h>
 
-const unsigned long arr1[10240] = { 0xDEADBEEF };
-static unsigned long arr2[10240];
+#include "utilities.h" // Implement `random_in_range` and `init_random` on your
+                       // own with `rand` from `stdlib.h`.
 
 int main(void)
 {
-    unsigned long arr3[] = {
-        42, 2, 3, 4, 5, 6, 7, 8, 9, 43
-    };
+    init_random();
 
-    printf(
-        "arr1 first and last elems: %#lX, %#lX\n"
-        "arr2 first and last elems: %#lX, %#lX\n"
-        "arr3 first and last elems: %#lX, %#lX\n",
-        arr1[0], arr1[10239],
-        arr2[0], arr2[10239],
-        arr3[0], arr3[9]
-    );
+    unsigned long suitID = random_in_range(1, 4);
+    char *suit;
+    if (suitID == 1)      suit = "Spades";
+    else if (suitID == 2) suit = "Clubs";
+    else if (suitID == 3) suit = "Hearts";
+    else if (suitID == 4) suit = "Diamonds";
+
+    unsigned long rankID = random_in_range(1, 13);
+    char *rank;
+    switch (rankID)
+    {
+        case 1:  rank = "A";     break;
+        case 2:  rank = "Two";   break;
+        case 3:  rank = "Three"; break;
+        case 4:  rank = "Four";  break;
+        case 5:  rank = "Five";  break;
+        case 6:  rank = "Six";   break;
+        case 7:  rank = "Seven"; break;
+        case 8:  rank = "Eight"; break;
+        case 9:  rank = "Nine";  break;
+        case 10: rank = "Ten";   break;
+        case 11: rank = "Jack";  break;
+        case 12: rank = "Queen"; break;
+        case 13: rank = "King";  break;
+    }
+
+    printf("The card you have picked is %s of %s.\n", rank, suit);
 
     return 0;
 }
 ```
 
-## Homework Problem #16: "Swap with Pointers"
+## Problem #16: "loops"
+
+Make the program below work by adding the `int_stack.h` file. Analyze the
+structured constructs of the C program below with `gdb` or `radare2`
+reverse engineering tool. Focus on how the `do/while`, `while`, and `for`
+constructs are implemented.
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "int_stack.h" // Implement `int_stack_create`, `int_stack_push`, and
+                       // `int_stack_pop` on your own. Use a `for` loop in some
+                       // of your methods.
+
+int main(void)
+{
+    int_stack_t stack = int_stack_create();
+
+    long input;
+    do {
+        scanf("%ld", &input);
+        int_stack_push(&stack, input);
+    } while (input != 0);
+
+    int_stack_pop(&stack);
+
+    while (stack.count > 0) {
+        long num = int_stack_pop(&stack);
+        printf(stack.count != 0 ? "%ld " : "%ld\n", num);
+    }
+
+    int_stack_destroy(&stack);
+
+    return 0;
+}
+```
+
+## Homework Problem #17: "Swap with Pointers"
 
 Recreate the following C program in x86-64 and aarch64 assembly manually.
 
@@ -137,7 +203,7 @@ int main(void)
 }
 ```
 
-## Homework Problem #17: "Structs"
+## Homework Problem #18: "Structs"
 
 Recreate the following C program in x86-64 and aarch64 assembly manually.
 
@@ -192,29 +258,30 @@ lab-3
 ├── p13
 │   ├── 13.x86-64.s
 │   └── 13.aarch64.s
-├── p14
-│   ├── 14.x86-64.s
-│   └── 14.aarch64.s
-├── p15
-│   ├── 15.x86-64.s
-│   └── 15.aarch64.s
+├── p14-15
+│   ├── 14.c
+│   ├── utilities.h
+│   └── 15.c
 ├── p16
-│   ├── 16.x86-64.s
-│   └── 16.aarch64.s
-└── p17
-    ├── 17.x86-64.s
-    └── 17.aarch64.s
+│   ├── int_stack.h
+│   └── 16.c
+├── p17
+│   ├── 17.x86-64.s
+│   └── 17.aarch64.s
+└── p18
+    ├── 18.x86-64.s
+    └── 18.aarch64.s
 ```
 
 Here you can find the commands that will be used to compile your code.
 
-| Problem                        | Compilation Command                          |
-| :----------------------------- | :------------------------------------------- |
-| p13: 13.x86-64.s, 13.aarch64.s | `gcc* -static -fno-pie -no-pie -o 13 13.*.s` |
-| p14: 14.x86-64.s, 14.aarch64.s | `gcc* -static -fno-pie -no-pie -o 14 14.*.s` |
-| p15: 15.x86-64.s, 15.aarch64.s | `gcc* -static -fno-pie -no-pie -o 15 15.*.s` |
-| p16: 16.x86-64.s, 16.aarch64.s | `gcc* -static -fno-pie -no-pie -o 16 16.*.s` |
-| p17: 17.x86-64.s, 17.aarch64.s | `gcc* -static -fno-pie -no-pie -o 17 17.*.s` |
+| Problem                         | Compilation Command                          |
+| :------------------------------ | :------------------------------------------- |
+| p13: 13.x86-64.s, 13.aarch64.s  | `gcc* -static -fno-pie -no-pie -o 13 13.*.s` |
+| p14-15: 14.c, 15.c, utilities.h | `gcc* -static -fno-pie -no-pie -o 1? 1?.c`   |
+| p16: 16.c, int_stack.h          | `gcc* -static -fno-pie -no-pie -o 16 16.c`   |
+| p17: 17.x86-64.s, 17.aarch64.s  | `gcc* -static -fno-pie -no-pie -o 17 17.*.s` |
+| p18: 18.x86-64.s, 18.aarch64.s  | `gcc* -static -fno-pie -no-pie -o 18 18.*.s` |
 
 ...where `*` is a cross compiler or ISA name.
 
