@@ -1,14 +1,17 @@
 Computer Architecture, Practice #3
 ==================================
 
-In this task, we will work with the stack to store local variables and send
-arguments to functions.
+In this task, we will work with the stack to store local variables, send
+arguments to functions, and study internals of fundamental structured
+programming constructs.
 
 ## Problem #13: "Arguments to Functions"
 
 Recreate the following C program in x86-64 and aarch64 assembly manually. Note
 that parameters are of type `int`, but the return types of functions are `long`.
-Use sign-extension instructions of the target platform to do the C casts.
+Use sign-extension instructions of the target platform to do the C casts. Read
+chapter 9 of the C Programming: A Modern Approach, 2'nd Edition by K. N. King at
+the end.
 
 ```C
 #include <stdio.h>
@@ -56,8 +59,11 @@ int main(void)
 
 ## Problem #14-15: "if" and "switch"
 
-Analyze the structured constructs of the C program below with `gdb` or `radare2`.
-Focus on how the `if` constructs are implemented.
+Analyze the structured constructs of the C program below with `gdb`, `radare2`,
+or the [Godbolt Compiler Explorer](https://godbolt.org). Focus on how the `if`
+constructs are implemented. Try rewriting the code using only one-way `if`
+constructs with a `goto` jump to a label inside and nothing else. Read chapter 5
+of the C Programming: A Modern Approach, 2'nd Edition by K. N. King at the end.
 
 ```C
 #include <stdio.h>
@@ -92,14 +98,17 @@ int main(void)
 ```
 
 Make the program below work by adding the `utilities.h` file. Analyze the
-structured constructs of the C program below with `gdb` or `radare2`. Focus on
-how the `switch` construct is implemented.
+structured constructs of the C program below with `gdb`, `radare2`, or the
+[Godbolt Compiler Explorer](https://godbolt.org). Focus on how the
+`switch` construct is implemented. Try rewriting the code using only one `goto`
+statement. You may have to use some non-standard GCC [extensions](https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html) for that. Read chapter 5 of the C Programming: A Modern Approach, 2'nd Edition
+by K. N. King at the end.
 
 ```c
 #include <stdio.h>
 
 #include "utilities.h" // Implement `random_in_range` and `init_random` on your
-                       // own with `rand` from `stdlib.h`.
+                       // own with `rand` and `srand` from `stdlib.h`.
 
 int main(void)
 {
@@ -139,10 +148,13 @@ int main(void)
 
 ## Problem #16: "loops"
 
-Make the program below work by adding the `int_stack.h` file. Analyze the
-structured constructs of the C program below with `gdb` or `radare2`
-reverse engineering tool. Focus on how the `do/while`, `while`, and `for`
-constructs are implemented.
+Make the program below work by adding the `int_stack.h`, the `int_stack.c`, and
+the `Makefile` files. Next, analyze the structured constructs of the C program
+below with `gdb`, `radare2`, or the [Godbolt Compiler Explorer](https://godbolt.org).
+Figure out how the `do/while`, `while`, and `for` constructs are implemented.
+Try rewriting the code using only one-way `if` constructs with a `goto` jump to
+a label inside and nothing else. Read chapter 6 of the C Programming: A Modern
+Approach, 2'nd Edition by K. N. King at the end.
 
 ```c
 #include <stdio.h>
@@ -151,7 +163,9 @@ constructs are implemented.
 
 #include "int_stack.h" // Implement `int_stack_create`, `int_stack_push`, and
                        // `int_stack_pop` on your own. Use a `for` loop in some
-                       // of your methods.
+                       // of your methods. Put function bodies into the
+                       // `int_stack.c` file. Create a Makefile to simplify the
+                       // compilation and cleanup of the program.
 
 int main(void)
 {
@@ -178,7 +192,15 @@ int main(void)
 
 ## Homework Problem #17: "Swap with Pointers"
 
-Recreate the following C program in x86-64 and aarch64 assembly manually.
+Analyze the `swap` function of the C program below with `gdb`, `radare2`,
+or the [Godbolt Compiler Explorer](https://godbolt.org). Read chapters 8, 11,
+and 12 of the C Programming: A Modern Approach, 2'nd Edition by K. N. King.
+Recreate the following C program in x86-64 and aarch64 assembly manually. Keep
+only the necessary elements. You will get zero for the whole lab if your code is
+just a copy-paste of the compiler's generated assembly. You may find this
+[old lecture video](https://youtu.be/Xpfnh7in-n8) helpful.
+
+Try to answer if is it possible to create a similar `swap` method in Java?
 
 ```C
 #include <stdio.h>
@@ -205,7 +227,12 @@ int main(void)
 
 ## Homework Problem #18: "Structs"
 
-Recreate the following C program in x86-64 and aarch64 assembly manually.
+Analyze the `v2d_t` structure of the C program below with `gdb`, `radare2`,
+or the [Godbolt Compiler Explorer](https://godbolt.org). Read chapters 16 and 17
+of the C Programming: A Modern Approach, 2'nd Edition by K. N. King. Recreate
+the following C program in x86-64 and aarch64 assembly manually. Keep only the
+necessary elements. You will get zero for the whole lab if your code is just a
+copy-paste of the compiler's generated assembly.
 
 ```C
 #include <stdio.h>
@@ -244,10 +271,15 @@ int main(void)
 ## GitHub Checkpoint #3
 
 For the third GitHub Checkpoint, you need to prepare, commit, and push Problems
-13 through 15 and all the Homework problems for Lab 3 to your private course
+13 through 16 and all the Homework problems for Lab 3 to your private course
 repository on GitHub. Submit the last commit ID without any extra characters on
 Canvas, pointing to the snapshot where all the problems were ready. You may make
 new commits and resubmit before the deadline multiple times.
+
+You don't have to submit your code's `goto` versions. Only practice rewriting
+structured constructs to spaghettified `goto` code to prepare for the Final
+exam. Leave the good high-level selection and loop constructs in your C files
+submitted to us.
 
 Here is the directory structure with the names of the files that you must use.
 
@@ -263,7 +295,9 @@ lab-3
 │   ├── utilities.h
 │   └── 15.c
 ├── p16
+│   ├── int_stack.c
 │   ├── int_stack.h
+│   ├── Makefile
 │   └── 16.c
 ├── p17
 │   ├── 17.x86-64.s
@@ -275,13 +309,13 @@ lab-3
 
 Here you can find the commands that will be used to compile your code.
 
-| Problem                         | Compilation Command                          |
-| :------------------------------ | :------------------------------------------- |
-| p13: 13.x86-64.s, 13.aarch64.s  | `gcc* -static -fno-pie -no-pie -o 13 13.*.s` |
-| p14-15: 14.c, 15.c, utilities.h | `gcc* -static -fno-pie -no-pie -o 1? 1?.c`   |
-| p16: 16.c, int_stack.h          | `gcc* -static -fno-pie -no-pie -o 16 16.c`   |
-| p17: 17.x86-64.s, 17.aarch64.s  | `gcc* -static -fno-pie -no-pie -o 17 17.*.s` |
-| p18: 18.x86-64.s, 18.aarch64.s  | `gcc* -static -fno-pie -no-pie -o 18 18.*.s` |
+| Problem                                       | Compilation Command                          |
+| :-------------------------------------------- | :------------------------------------------- |
+| p13: 13.x86-64.s, 13.aarch64.s                | `gcc* -static -fno-pie -no-pie -o 13 13.*.s` |
+| p14-15: 14.c, 15.c, utilities.h               | `gcc -static -fno-pie -no-pie -o 1? 1?.c`    |
+| p16: 16.c, int_stack.h, int_stack.c, Makefile | `make`                                       |
+| p17: 17.x86-64.s, 17.aarch64.s                | `gcc* -static -fno-pie -no-pie -o 17 17.*.s` |
+| p18: 18.x86-64.s, 18.aarch64.s                | `gcc* -static -fno-pie -no-pie -o 18 18.*.s` |
 
 ...where `*` is a cross compiler or ISA name.
 
@@ -311,9 +345,10 @@ outlined in the samples.
 #### x86 ISA
 
 * [Intel® 64 and IA-32 Architectures Software Developer Manuals](https://software.intel.com/en-us/articles/intel-sdm)
-* [System V AMD64 ABI](https://software.intel.com/sites/default/files/article/402129/mpx-linux64-abi.pdf)
+* [System V AMD64 ABI](https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf)
 * [X86 Opcode Reference](http://ref.x86asm.net/index.html)
 * [X86 Instruction Reference](http://www.felixcloutier.com/x86)
+* [Intel x86 JUMP Quick Reference](http://www.unixwiz.net/techtips/x86-jumps.html)
 * [Optimizing Subroutines in Assembly Language](http://www.agner.org/optimize/optimizing_assembly.pdf)
 
 #### ARM64 ISA
