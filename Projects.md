@@ -1,23 +1,23 @@
-### Computer Architecture
-# Course Project
+# Principles of Computing Systems
+
+## Course Project
 ## Dynamic String in C
 
 Write a C program that implements a dynamically sized string called my_string. The structure should contain a character array and an integer to store the current length of the string. 
 
 ### Functionality  
+
 1. Initialize the structure with a given string.
-
 2. Resize the structure when needed.  
-
 3. Append a character to the structure.  
-
 4. Concatenate another string to the structure.  
-
 5. Free the memory allocated for the structure.  
 
-### Definitions  
+### Definitions
+
 The string should have the following definitions:
-```
+
+```c
 typedef struct {
     char* data;
     int length;
@@ -29,11 +29,14 @@ void my_string_append_char(my_string* str, char c);
 void my_string_concat(my_string* str, const char* input);
 void my_string_free(my_string* str);
 ```
+
 ### Test code  
+
 Example C code for the main function to test the my_string methods:
 
-```
-int main() {
+```c
+int main(void)
+{
     my_string str;
 
     // Initialize the structure with a given string
@@ -54,9 +57,11 @@ int main() {
     return 0;
 }
 ```
+
 Please note that you are not allowed to use any standard library functions to implement this project
 
 Here is the directory structure with the names of the files that you must use:
+
 ```
 <Your private GitHub repository>
 ...previous works
@@ -64,6 +69,7 @@ project
 ├── my_string.h
 └── proj.c
 ```
+
 Ensure not to submit any binary files (object files and executables). Your grade
 will be lowered for that. You will get zero for a late submission. You will get
 zero if the auto-grading script cannot parse your commit, clone your repository,
@@ -92,3 +98,10 @@ outlined in the samples.
 
 * C Programming Language, 2nd Edition by Brian W. Kernighan and Dennis M. Ritchie
 * C Programming: A Modern Approach, 2nd Edition by K. N. King
+
+# Computer Architecture
+
+## Course Project
+## Almurut I
+
+* <https://github.com/toksaitov/asc1-project>
