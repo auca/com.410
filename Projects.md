@@ -19,8 +19,9 @@ The string should have the following definitions:
 
 ```c
 typedef struct {
-    char* data;
     int length;
+    int capacity;
+    char* data;
 } my_string;
 
 void my_string_init(my_string* str, const char* input);
