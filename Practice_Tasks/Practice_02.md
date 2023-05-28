@@ -1,5 +1,5 @@
-Computer Architecture, Practice #2
-==================================
+Principles of Computing Systems, Computer Architecture, Practice #2
+===================================================================
 
 In this task, we need to familiarize ourselves with the fundamentals of x86-64
 and aarch64 assembly languages.
@@ -147,7 +147,7 @@ compile your code with the following flags `-static -fno-pie -no-pie`.
 
 For the second GitHub Checkpoint, you need to prepare, commit, and push Problems
 7 through 9 and all the Homework problems for Lab 2 to your private course
-repository on GitHub. Submit the last commit ID without any extra characters on
+repository on GitHub. Submit the last commit URL without any extra characters on
 Canvas, pointing to the snapshot where all the problems were ready. You may make
 new commits and resubmit before the deadline multiple times.
 
@@ -192,11 +192,11 @@ Here you can find the commands that will be used to compile your code.
 
 Ensure not to submit any binary files (object files and executables). Your grade
 will be lowered for that. You will get zero for a late submission. You will get
-zero if the auto-grading script cannot parse your commit, clone your repository,
-check out the commit, find your source files under the specific names the
-instructor was using during the class, build the sources, run your programs. You
-will also get zero if your programs' output format is not the same as that
-outlined in the samples.
+zero if the auto-grading script cannot parse your commit ID, clone your
+repository, check out the commit, find your source files under the specific
+names the instructor was using during the class, build the sources, run your
+programs. You will also get zero if your programs' output format is not the same
+as that outlined in the samples.
 
 ### Documentation
 
