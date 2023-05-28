@@ -37,7 +37,7 @@ figure out what to do to get your environment up and running. Internet is full
 of information about the process, though.
 
 * [Oracle VM VirtualBox](https://www.virtualbox.org)
-* [Ubuntu 20.04 Desktop](https://ubuntu.com/#download) with GUI or the
+* [Ubuntu 22.04 Desktop](https://ubuntu.com/#download) with GUI or the
   [server](https://ubuntu.com/download/server) version without it
 
 ## Development Environment
