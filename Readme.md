@@ -11,6 +11,4 @@ General course information, time, rules, grading, and books
 
 View this semester's class recordings
 
-### COM-410, Computer Architecture
-
 * <https://youtube.com/playlist?list=PLHcEzCb_lW6eUxhEFFdibTIDIhS9f7CnJ>
