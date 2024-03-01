@@ -7,13 +7,13 @@ In this task, we need to familiarize ourselves with the fundamentals of the x86-
 
 Write an x86-64 assembly program that outputs the "hello, world" message to the screen. Assemble the source code with the GNU Assembler through the C compiler front end (in this case, the linker will also be called to combine your object file with the C standard library). Ensure that you have no translation or linking errors. Ensure to pass `-static -fno-pie -no-pie` flags to gcc. `-static` will tell the linker not to load the standard library during runtime, but to put it directly into the executable. `-fno-pie -no-pie` linker and compiler flags will disable the generation of position-independent code (PIC) to simplify our assembly.
 
-```bash
+```
 gcc -static -fno-pie -no-pie -o 07 07.x86-64.s
 ```
 
 Run the program.
 
-```bash
+```
 ./07
 hello, world
 ```
@@ -22,7 +22,7 @@ hello, world
 
 Write an x86-64 assembly program that reads a number of type `long` from the user, increments it by one, and then outputs the incremented value. If you encounter any errors, use GDB to debug your program.
 
-```bash
+```
 gcc -static -fno-pie -no-pie -o 08 08.x86-64.s
 ./08
 123
@@ -36,7 +36,7 @@ Problem #5.
 
 Write an x86-64 assembly program that reads two numbers of type `long` from the user and outputs their sum. Use GDB to debug your program in case of errors.
 
-```bash
+```
 gcc -static -fno-pie -no-pie -o 09 09.x86-64.s
 ./09
 10 20
@@ -52,7 +52,7 @@ Write a program in x86-64 assembly that reads two numbers of type `int` from the
 
 ## Sample Input and Output
 
-```bash
+```
 ./10
 10 2
 10 * 2 = 20
@@ -64,7 +64,7 @@ Write a program in x86-64 assembly that reads two numbers of type `long` from th
 
 ## Sample Input and Output
 
-```bash
+```
 ./11
 10 9
 10 / 9 = 1
@@ -76,7 +76,7 @@ Write a program in x86-64 assembly that reads two numbers of type `long` from th
 
 ## Sample Input and Output
 
-```bash
+```
 ./12
 10 3
 10 % 3 = 1
