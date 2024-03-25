@@ -108,14 +108,14 @@ lab-2
 
 Here you can find the commands that will be used to compile your code.
 
-| Problem                        | Compilation Command                         |
-| :----------------------------- | :------------------------------------------ |
-| p07: 07.x86-64.s               | `gcc -static -fno-pie -no-pie -o 07 07.*.s` |
-| p08: 08.x86-64.s               | `gcc -static -fno-pie -no-pie -o 08 08.*.s` |
-| p09: 09.x86-64.s               | `gcc -static -fno-pie -no-pie -o 09 09.*.s` |
-| p10: 10.x86-64.s               | `gcc -static -fno-pie -no-pie -o 10 10.*.s` |
-| p11: 11.x86-64.s               | `gcc -static -fno-pie -no-pie -o 11 11.*.s` |
-| p12: 12.x86-64.s               | `gcc -static -fno-pie -no-pie -o 12 12.*.s` |
+| Problem          | Compilation Command                         |
+| :--------------- | :------------------------------------------ |
+| p07: 07.x86-64.s | `gcc -static -fno-pie -no-pie -o 07 07.*.s` |
+| p08: 08.x86-64.s | `gcc -static -fno-pie -no-pie -o 08 08.*.s` |
+| p09: 09.x86-64.s | `gcc -static -fno-pie -no-pie -o 09 09.*.s` |
+| p10: 10.x86-64.s | `gcc -static -fno-pie -no-pie -o 10 10.*.s` |
+| p11: 11.x86-64.s | `gcc -static -fno-pie -no-pie -o 11 11.*.s` |
+| p12: 12.x86-64.s | `gcc -static -fno-pie -no-pie -o 12 12.*.s` |
 
 ...where `*` is a cross compiler or ISA name.
 

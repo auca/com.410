@@ -1,5 +1,5 @@
-Principles of Computing Systems, Computer Architecture, Practice #1
-===================================================================
+Computer Architecture, Practice #1
+==================================
 
 In this task, we need to familiarize ourselves with the remote server's
 development environment, the development tools, and the language that we will
@@ -452,7 +452,7 @@ For the first GitHub Checkpoint, you need to prepare, commit, and push Problems
 1 through 3 and all the Homework problems for Lab 1 to your private course
 repository on GitHub. You have to get the repository from the instructor if you
 don't have one. Submit the last commit URL without any extra characters
-on Canvas, pointing to the snapshot where all the problems were ready. You may
+on Moodle, pointing to the snapshot where all the problems were ready. You may
 make new commits and resubmit before the deadline multiple times.
 
 Here is the directory structure with the names of the files that you must use.
