@@ -1,7 +1,7 @@
 Computer Architecture, Practice #4
 ==================================
 
-In this task, we will work with structured programming constructs.
+In this task, we will work with structured programming constructs such as `if`, `switch`, `for`, `while`, and `do/while`.
 
 ## Problem #18: "if"
 
@@ -87,9 +87,7 @@ int main(void)
 
 ## Problem #20: "loops"
 
-Analyze the structured constructs of the C program below with r2 reverse
-engineering tool. Focus on how the `do/while`, `while`, and `for` constructs are
-implemented.
+Analyze the structured constructs of the C program below with Radare2 reverse engineering tool. Focus on how the `do/while`, `while`, and `for` constructs are implemented.
 
 ```c
 #include <stdio.h>
@@ -125,14 +123,11 @@ int main(void)
 
 ## Homework Problem #21: "if in assembly"
 
-Recreate the C program from Problem #18 in x86-64 and aarch64 assembly manually.
+Recreate the C program from Problem #18 in x86-64 assembly manually.
 
 ## Homework Problem #22: "Loops in assembly"
 
-Recreate the `20.c` file from Problem #20 in x86-64 and aarch64 assembly
-manually. Leave the `int_stack.c` and `.h` files as is. Modify the `Makefile`
-to produce three executables from the C file, from the x86-64 assembly, and from
-the aarch64 assembly as it was done in Problem #19.
+Recreate the `20.c` file from Problem #20 in x86-64 assembly manually. Leave the `int_stack.c` and `.h` files as is. Modify the `Makefile` to produce executables from the C file from the x86-64 assembly as it was done in Problem #19.
 
 ## GitHub Checkpoint #4
 
