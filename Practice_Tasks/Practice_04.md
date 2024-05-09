@@ -5,7 +5,7 @@ In this task, we will work with structured programming constructs such as `if`, 
 
 ## Problem #18: "if"
 
-Analyze the structured constructs of the C program below using the Radare2 (`radare2`) reverse engineering tool, focusing on the implementation of the `if` construct.
+Analyze the structured constructs of the C program below using the Radare2 (`radare2`) reverse engineering tool, focusing on the implementation of the `if` constructs.
 
 ```C
 #include <stdio.h>
@@ -41,13 +41,18 @@ int main(void)
 
 ## Problem #19: "switch"
 
-Manually convert the specified C program into x86-64 assembly languages.
+Manually convert the specified C program into x86-64 assembly language.
 
-```c
+```C
 #include <stdio.h>
 
-#include "utilities.h" // Implement `random_in_range` and `init_random` on your
-                       // own with `rand` from `stdlib.h`.
+#include "utilities.h" // Implement `random_in_range` and `init_random` using
+                       // the `rand` function from `stdlib.h`. Initially, set
+                       // the seed using the `time` function from `time.h` to
+                       // ensure different results each time the program runs.
+                       // Before submitting, remove the `time` function call and
+                       // set the seed to a fixed value of 42 to pass the
+                       // auto-grader.
 
 int main(void)
 {
@@ -85,18 +90,19 @@ int main(void)
 }
 ```
 
-## Problem #20: "loops"
+## Problem #20: "Loops"
 
-Analyze the structured constructs of the C program below with Radare2 reverse engineering tool. Focus on how the `do/while`, `while`, and `for` constructs are implemented.
+Analyze the structured constructs of the C program below with the Radare2 reverse engineering tool, focusing on how the `do/while`, `while`, and `for` constructs are implemented.
 
-```c
+```C
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-#include "int_stack.h" // Implement `int_stack_create`, `int_stack_push`, and
-                       // `int_stack_pop` on your own. Use a `for` loop in some
-                       // of your methods.
+#include "int_stack.h" // Implement the functions `int_stack_create`,
+                       // `int_stack_push`, `int_stack_pop`, and
+                       // `int_stack_destroy` on your own. Ensure that you use a
+                       // `for` loop in at least one of these functions.
 
 int main(void)
 {
@@ -121,35 +127,32 @@ int main(void)
 }
 ```
 
-## Homework Problem #21: "if in assembly"
+## Homework Problem #21: "if in Assembly"
 
 Recreate the C program from Problem #18 in x86-64 assembly manually.
 
-## Homework Problem #22: "Loops in assembly"
+## Homework Problem #22: "Loops in Assembly"
 
-Recreate the `20.c` file from Problem #20 in x86-64 assembly manually. Leave the `int_stack.c` and `.h` files as is. Modify the `Makefile` to produce executables from the C file from the x86-64 assembly as it was done in Problem #19.
+Recreate the `20.c` file from Problem #20 in x86-64 assembly manually. Leave the `int_stack.c` and `.h` files as is. Modify the `Makefile` to produce executables from the C files, similar to what was done in Problem #19.
 
 ## GitHub Checkpoint #4
 
-For the last GitHub checkpoint, you are required to prepare, commit, and push Problems 18 through 20, as well as all the Homework problems for Lab 4, to your private course repository on GitHub. If you do not already have a private course repository, you will need to obtain one from the instructor. Upon completion, submit the URL of the last commit—ensuring no extraneous characters are included—on Moodle. This URL should point to the snapshot where all the problems have been completed. You are allowed to make new commits and resubmit the URL multiple times before the deadline if necessary.
+For the final GitHub checkpoint, you are required to prepare, commit, and push Problems 18 through 20, as well as all the homework problems for Lab 4, to your private course repository on GitHub. If you do not already have a private course repository, you will need to obtain one from the instructor. Upon completion, submit the URL of the last commit—ensuring no extraneous characters are included—on Moodle. This URL should point to the snapshot where all the problems have been completed. You are allowed to make new commits and resubmit the URL multiple times before the deadline, if necessary.
 
-Here is the directory structure with the names of the files that you must use. Note that Homework problems go into the` p18` and `p20` directories.
+Here is the directory structure with the names of the files that you must use. Note that Homework problems go into the `p18` and `p20` directories.
 
 ```
 <Your private GitHub repository>
-...previous works
 lab-4
 ├── p18
 │   └── 18.x86-64.s
 ├── p19
 │   ├── 19.x86-64.s
-│   ├── 19.c
 │   ├── utilities.c
 │   ├── utilities.h
 │   └── Makefile
 └── p20
     ├── 20.x86-64.s
-    ├── 20.c
     ├── int_stack.c
     ├── int_stack.h
     └── Makefile
@@ -195,6 +198,7 @@ Ensure not to submit any binary files, such as object files and executables, as 
 * [GAS Syntax](https://en.wikibooks.org/wiki/X86_Assembly/GAS_Syntax)
 * [GDB Quick Reference](https://users.ece.utexas.edu/~adnan/gdb-refcard.pdf)
 * [Pro Git](https://git-scm.com/book/en/v2)
+* [Radare2 Book](https://book.rada.re)
 
 ### Books
 
